@@ -1,0 +1,82 @@
+.header {
+    background: transparent;
+    height: auto;
+}
+
+.header .nav {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-areas: 
+        "logo . . . . . . . . . . . themeToggler hamburger"; 
+    justify-content: center;
+    padding: 20px;
+}
+
+.header .logo {
+    grid-area: logo;
+    justify-self: end;
+    background: black;
+    color: white;
+    padding: 10px;
+    align-self: center;
+    /* box-shadow:  20px -20px 27px #387aa0, 
+             -20px 20px 27px #72f8ff; */
+}
+
+.header .themeToggler {
+    grid-area: themeToggler;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.header .themeToggler > * {
+    width: 25px;
+    transition: 300ms all ease-in-out;
+    
+}
+
+.header .themeToggler:hover > * {
+    transform: rotate(180deg);
+}
+
+.header .hamburger {
+    background: white;
+    border-radius: 50%;
+    grid-area: hamburger;
+    align-self: center;
+    justify-self: start;
+    transition: 300ms all ease-in-out;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+.header .hamburger div {
+    width: 25px;
+  	height: 2px;
+  	background-color: black;
+     margin: 4px 0;
+     cursor: pointer;
+     transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, background-color 0.25s linear;
+}
+
+.hamburger div:nth-child(1), 
+.hamburger div:nth-child(2), 
+.hamburger:hover div {
+    width: 24px;
+}
+
+.header .hamburger div:nth-child(3) {
+    width: 15px;
+  	height: 2px;
+  	background-color: black;
+ 	margin: 4px 0;
+}
+
+.header .hamburger:hover > div:nth-child(3) {
+    width: 24px;
+}
+

@@ -1,5 +1,12 @@
 import React from "react"
+import Navigation from "../components/Nav"
+import SEO from "../components/SEO/seo"
 
 export default function Home() {
-  return <h1>Hello world!</h1>
+  return (
+    <>
+      <SEO title="Joshua Olajide | Frontend Developer"/>
+      <Navigation />
+    </>
+  )
 }

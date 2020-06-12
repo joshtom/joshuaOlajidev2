@@ -83,15 +83,109 @@
 }
 
 .header .navToggle {
-    background: green;
+    background: lightcoral;
     position: fixed;
     height: 100vh;
-    clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    /* clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%); */
     right: 0;
-    width: 60vw;
+    width: 35vw;
     transform: translateX(1000px);
     z-index: 2;
     top: 0;
     opacity: 0;
+    padding: 20px;
 }
+
+.header .navToggle {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    " link . . . . social ";
+}
+
+.header .navToggle .link {
+    /* background: tomato; */
+    grid-area: link;
+    align-self: center;
+    justify-self: start;
+}
+
+.header .navToggle .link li {
+    list-style-type: none;
+}
+
+.header .navToggle .link li > a {
+    color: black;
+    text-decoration: none;
+    font-size: 3.5rem;
+    position: relative;
+}
+
+.header .navToggle .link li > .social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .navToggle .link li > .social > a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+
+.header .navToggle .link li > .social a::after {
+    content: '';
+    display: inline-block;
+    background: rgb(255, 255, 255);
+    height: 0px;
+    width: 70%;
+    position: absolute;
+    left: -8px;
+    right: -12px;
+    bottom: -1px;
+    opacity: 0.1;
+    transition: 0.25s all ease-in-out;
+}
+
+.header .navToggle .link li > a::after {
+    content: '';
+    display: block;
+    background: rgb(255, 255, 255);
+    height: 0px;
+    position: absolute;
+    left: -8px;
+    right: -12px;
+    bottom: -1px;
+    opacity: 0.1;
+    transition: height 0.25s ease, opacity 0.25s ease;
+}
+
+.header .navToggle .link li a:hover::after {
+    height: 27px;
+    opacity: 0.15;
+}
+.header .navToggle .close {
+    background: rgba(0,0,0,.5);
+    grid-area: social;
+    justify-self: end;
+    width: 100%;
+    padding: 30px 10px 0px 10px;
+}
+
+.header .navToggle .close > div {
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header .navToggle .close > div > * {
+    width: 20px;
+    font-weight: bold;
+}
+
 

@@ -1,6 +1,9 @@
 .header {
-    background: transparent;
     height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
 }
 
 .header .nav {
@@ -72,11 +75,23 @@
 .header .hamburger div:nth-child(3) {
     width: 15px;
   	height: 2px;
-  	background-color: black;
  	margin: 4px 0;
 }
 
 .header .hamburger:hover > div:nth-child(3) {
     width: 24px;
+}
+
+.header .navToggle {
+    background: green;
+    position: fixed;
+    height: 100vh;
+    clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%);
+    right: 0;
+    width: 60vw;
+    transform: translateX(1000px);
+    z-index: 2;
+    top: 0;
+    opacity: 0;
 }
 

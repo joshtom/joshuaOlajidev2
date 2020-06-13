@@ -83,7 +83,7 @@
 }
 
 .header .navToggle {
-    background: lightcoral;
+    background: tomato;
     position: fixed;
     height: 100vh;
     /* clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%); */

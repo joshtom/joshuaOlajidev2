@@ -1,17 +1,34 @@
 .banner {
-    width: 100%;
-    height: 100vh;
+    width: 90%;
+    height: 90vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-template-areas: " section1 section2 ";
+    grid-template-areas: "section1  section2";
     position: relative;
+    margin: auto;
+    
 }
 
 .banner section:nth-child(1) {
     background: tomato;
     grid-area: section1;
     height: auto;
+    position: relative;
+}
+
+.banner section:nth-child(1) > .scroll{
+    position: absolute;
+    right: 0;
+    transform: rotate(-90deg);
+    bottom: 40px;
+    color: white;
+    display: flex;
+}
+
+.banner section:nth-child(1) > .scroll > div:nth-child(1) {
+    width: 20px;
+    fill: white;
 }
 
 .banner section:nth-child(2) {
@@ -33,7 +50,7 @@
 }
 
 .banner h1 > div:nth-child(2) {
-    margin-top: -15px;
+    margin-top: -35px;
     display: flex;
     padding: 0;
     flex-direction: row;
@@ -49,3 +66,4 @@
     margin-bottom: 30px;
     margin-left: 10px;
 }
+

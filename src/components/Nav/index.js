@@ -1,34 +1,57 @@
 import React from "react";
 import styles from "./styles.module.css";
-import { TimelineLite } from "gsap";
+import { TimelineLite, TweenMax } from "gsap";
 import Sunlight from "../../assets/sunlight.svg";
 import Close from "../../assets/close.svg";
 
 
 export default function Navigation() {
-    const tl = new TimelineLite({paused: true});
+    const tl = new TimelineLite({paused: true, repeat: false});
+    const closeTl = TweenMax;
     const navToggle = React.useRef(null);
+    const navToggleLinks = React.useRef(null);
+    const header = React.useRef(null);
     const aboutLink = React.useRef(null);
     const writingLink = React.useRef(null);
     const projectLink = React.useRef(null);
     const contactLink = React.useRef(null);
     const socialLink = React.useRef(null);
+    const closeDiv = React.useRef(null);
+
 
     const handleNavClick = () => {
-        tl.to(navToggle.current, .4, 
+          tl.to(navToggle.current, .4, 
             {   x: 0, 
                 opacity: 1,
-                ease: "slow(0.7, 0.7, false)" 
+                ease: "back.out(1.7)"
             })
-            .fromTo(aboutLink.current,   { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
-            .fromTo(writingLink.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
-            .fromTo(projectLink.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
-            .fromTo(contactLink.current, { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
-            .fromTo(socialLink.current,  { y: 20, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo(aboutLink.current,   .3,  { y: 10, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo(writingLink.current, .3,{ y: 10, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo(projectLink.current, .3,{ y: 10, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo(contactLink.current, .3,{ y: 10, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo(socialLink.current,  .4,{ y: 10, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo(closeDiv.current,  .4,{ x: 100, opacity: 0 }, { x: 0, opacity: 1 })
             .play();
+        
     }
+
+    const handleCloseClick = e => {
+        if (navToggleLinks.current.contains(e.target)) {
+            return;
+          }
+        closeTl.to(navToggle.current, .4, { x: 1000, opacity: 0 });
+    }
+
+    React.useEffect(() => {
+        // add when mounted
+        document.addEventListener("mousedown", handleCloseClick);
+        // return function to be called when unmounted
+        return () => {
+          document.removeEventListener("mousedown", handleCloseClick);
+        };
+      }, []);
     return (
-        <header className={styles.header}>
+        <header className={styles.header} ref={header}>
             <nav className={styles.nav}>
                 <div className={styles.logo}>
                 JO
@@ -47,8 +70,11 @@ export default function Navigation() {
                 </div>
             </nav>
 
-            <div className={styles.navToggle} ref={navToggle}>
-                <ul className={styles.link}>
+            <div 
+            className={styles.navToggle} 
+            ref={navToggle}
+            >
+                <ul className={styles.link} ref={navToggleLinks}>
                     <li ref={aboutLink}>
                         <a href="#" id="about">About</a>
                     </li>
@@ -75,8 +101,11 @@ export default function Navigation() {
                     </li>
                 </ul>
 
-                <div className={styles.close}>
-                        <div>
+                <div className={styles.close} ref={closeDiv}>
+                        <div 
+                        onClick={handleCloseClick}
+                        role="button"
+                        >
                             <Close />
                         </div>
                 </div>

@@ -1,17 +1,9 @@
 import Typography from "typography"
+import fairyGateTheme from "typography-theme-fairy-gates"
+import { black } from "color-name"
 
-const typography = new Typography({
-  baseFontSize: "18px",
-  baseLineHeight: 1.666,
-  headerFontFamily: [
-    "Avenir Next",
-    "Helvetica Neue",
-    "Segoe UI",
-    "Helvetica",
-    "Arial",
-    "sans-serif",
-  ],
-  bodyFontFamily: ["Avenir Next", "serif"],
-})
+const typography = new Typography(fairyGateTheme)
 
+
+export const { scale, rhythm, options } = typography
 export default typography

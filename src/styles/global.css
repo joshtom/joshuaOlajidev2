@@ -1,3 +1,5 @@
-html {
-    /* background-color: lavenderblush; */
-  }
+a {
+    text-decoration: none;
+    background-image: none;
+    text-shadow: none;
+}

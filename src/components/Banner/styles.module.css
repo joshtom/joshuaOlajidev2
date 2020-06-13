@@ -1,0 +1,51 @@
+.banner {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: " section1 section2 ";
+    position: relative;
+}
+
+.banner section:nth-child(1) {
+    background: tomato;
+    grid-area: section1;
+    height: auto;
+}
+
+.banner section:nth-child(2) {
+    background: #fff;
+    grid-area: section2;
+    height: auto;
+}
+
+.banner h1 {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 7rem;
+    font-weight: bolder;
+    z-index: 1000;
+    color: black;
+}
+
+.banner h1 > div:nth-child(2) {
+    margin-top: -15px;
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    align-self: flex-end;
+}
+
+.banner h1 > div:nth-child(2) > span.dot {
+    background: tomato;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-self: flex-end;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}

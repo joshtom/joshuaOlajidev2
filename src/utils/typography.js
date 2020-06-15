@@ -1,6 +1,5 @@
 import Typography from "typography"
 import fairyGateTheme from "typography-theme-fairy-gates"
-import { black } from "color-name"
 
 const typography = new Typography(fairyGateTheme)
 

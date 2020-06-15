@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-import Moon from "../../assets/moon.svg";
+import DownArrow from "../../assets/downArrow.svg";
 
 
 export default function Banner () {
@@ -8,7 +8,9 @@ export default function Banner () {
         <div className={styles.banner}>
             <section>
             <div className={styles.scroll}>
-               <div><Moon /></div> <div>scroll</div>
+               <div className={styles.scroller}>
+                   <DownArrow className={styles.downArrow}/>
+                </div> 
             </div>
             </section>
 

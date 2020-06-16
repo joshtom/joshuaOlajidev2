@@ -1,9 +1,10 @@
 .header {
     height: auto;
-    position: fixed;
+    position: absolute;
     top: 0;
     z-index: 1;
     width: 100%;
+    /* background: red; */
 }
 
 .header .nav {
@@ -33,6 +34,9 @@
     align-items: center;
     padding: 10px;
     cursor: pointer;
+    /* position: absolute;
+    right: 110px;
+    z-index: 1000; */
 }
 
 .header .themeToggler > * {
@@ -46,7 +50,7 @@
 }
 
 .header .hamburger {
-    background: white;
+    /* background: white; */
     border-radius: 50%;
     grid-area: hamburger;
     align-self: center;
@@ -54,7 +58,19 @@
     transition: 300ms all ease-in-out;
     cursor: pointer;
     padding: 10px;
+    /* position: absolute;
+    right: 70px;
+    z-index: 1000; */
 }
+
+/* @media screen and (min-width: 1000px) {
+    .header .hamburger {
+        right: 70px;
+    }
+    .header .themeToggler {
+        right: 110px;
+    }
+} */
 
 
 .header .hamburger div {
@@ -72,15 +88,27 @@
     width: 24px;
 }
 
+
 .header .hamburger div:nth-child(3) {
     width: 15px;
   	height: 2px;
  	margin: 4px 0;
 }
 
-.header .hamburger:hover > div:nth-child(3) {
-    width: 24px;
+.header .hamburger:focus > div:nth-child(3) {
+    width: 24px; 
+    opacity: 0;
+} 
+
+.header .hamburger:focus > div:nth-child(1) {
+    transform: translateY(6px) rotate(50deg);
 }
+
+.header .hamburger:focus > div:nth-child(2) {
+    transform:rotate(-50deg);
+    
+}
+
 
 .header .navToggle {
     background: tomato;
@@ -90,11 +118,26 @@
     right: 0;
     width: 35vw;
     transform: translateX(1000px);
-    z-index: 2;
+    z-index: -1;
     top: 0;
-    opacity: 0;
     padding: 20px;
 }
+
+@media screen and (max-width: 980px) {
+    .header .navToggle {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header .navToggle {
+        width: 100vw;
+    }
+    .header .navToggle ul li{
+        margin-bottom: 30px;
+    }
+}
+
 
 .header .navToggle {
     display: grid;

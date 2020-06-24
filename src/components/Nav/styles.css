@@ -50,7 +50,6 @@
 }
 
 .header .hamburger {
-    /* background: white; */
     border-radius: 50%;
     grid-area: hamburger;
     align-self: center;
@@ -79,7 +78,8 @@
   	background-color: black;
      margin: 4px 0;
      cursor: pointer;
-     transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, background-color 0.25s linear;
+     /* transition: width 0.125s ease-in-out, top 0.25s ease-in-out 0.5s, transform 0.25s ease-out 0.25s, opacity 0.001s linear 0.5s, background-color 0.25s linear; */
+     transition: all 0.125s ease-in-out;
 }
 
 .hamburger div:nth-child(1), 
@@ -95,17 +95,21 @@
  	margin: 4px 0;
 }
 
-.header .hamburger:focus > div:nth-child(3) {
-    width: 24px; 
-    opacity: 0;
-} 
-
-.header .hamburger:focus > div:nth-child(1) {
-    transform: translateY(6px) rotate(50deg);
+.header .hamburger:hover > div:nth-child(3) {
+    width: 24px;
 }
 
-.header .hamburger:focus > div:nth-child(2) {
-    transform:rotate(-50deg);
+.header .animate__hamburger > div:nth-child(3) {
+    width: 24px; 
+    opacity: 0 !important;
+} 
+
+.header .animate__hamburger > div:nth-child(1) {
+    transform: translateY(6px) rotate(45deg) !important;
+}
+
+.header .animate__hamburger > div:nth-child(2) {
+    transform:rotate(-45deg) !important;
     
 }
 
@@ -200,7 +204,7 @@
     right: -12px;
     bottom: -1px;
     opacity: 0.1;
-    transition: height 0.25s ease, opacity 0.25s ease;
+    transition: all 0.25s ease;
 }
 
 .header .navToggle .link li a:hover::after {

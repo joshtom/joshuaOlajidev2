@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./styles.css";
-import { TimelineLite, TweenLite } from "gsap";
+import gsap from 'gsap';
 import Sunlight from "../../assets/sunlight.svg";
 // import Close from "../../assets/close.svg";
 
@@ -16,7 +16,7 @@ export default function Navigation() {
     const socialLink = useRef(null);
 
     useEffect(() => {
-        tl.current = new TimelineLite({paused: true});
+        tl.current = gsap.timeline({paused: true});
         tl.current.to(navToggle.current, .4, 
             {
                 x: 0,

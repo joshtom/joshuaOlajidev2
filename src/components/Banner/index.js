@@ -18,7 +18,7 @@ export default function Banner () {
 
             <div className={styles.bannerText}>
                 <h1 className={styles.bannerTextHeading}>
-                    HELLO <span className={styles.dot}></span>
+                    HELLO.
                 </h1> 
 
                 <h1>

@@ -1,0 +1,10 @@
+.more {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    div {
+        background: tomato;
+        color: white;
+    }
+}

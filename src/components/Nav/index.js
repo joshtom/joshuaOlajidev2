@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
 import "./styles.css";
 import gsap from 'gsap';
 import Sunlight from "../../assets/sunlight.svg";
@@ -15,6 +15,17 @@ export default function Navigation() {
     const Link = useRef(null);
     const socialLink = useRef(null);
 
+    function useLockBodyScroll() {
+        useLayoutEffect(() => {
+         // Get original value of body overflow
+         const originalStyle = window.getComputedStyle(document.body).overflow;  
+         // Prevent scrolling on mount
+         document.body.style.overflow = 'hidden';
+         // Re-enable scrolling when component unmounts
+         return () => document.body.style.overflow = originalStyle;
+        }, []); // Empty array ensures effect is only run on mount and unmount
+      }
+
     useEffect(() => {
         tl.current = gsap.timeline({paused: true});
         tl.current.to(navToggle.current, .4, 
@@ -25,20 +36,19 @@ export default function Navigation() {
             })
             .fromTo(socialLink.current,  .4,{ y: 10, opacity: 0 }, { y: 0, opacity: 1 })
             .play();
-            document.body.style.overflow = "hidden";
     }, []);
-
-    // useEffect(() => {
-    //     if (navToggleLinks.current.contains(e.target)) {
-    //         setToggled(false)
-    //         tl.current.reverse();
-    //       }
-       
-    // }, [])
 
 
     useEffect(() => {
-        isToggled ? tl.current.play() : tl.current.reverse(); document.body.style.overflow = "none";;
+        if(isToggled) {
+            tl.current.play();
+            document.getElementsByTagName("html")[0].style.overflow = 'hidden'
+        } else {
+            tl.current.reverse(); 
+            setTimeout(() => {
+                document.getElementsByTagName("html")[0].style.overflow = 'auto'
+            }, 700)
+        }
       }, [isToggled]);
 
 

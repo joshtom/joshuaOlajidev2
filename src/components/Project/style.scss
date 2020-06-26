@@ -1,14 +1,71 @@
-.project {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 0px;
-    background: red;
+.projects {
+    min-height: 100vh;
+    padding: 50px;
+
+    @media screen and (max-width:500px){
+        padding: 30px;
     }
     
-    .div1 { grid-area: 2 / 2 / 3 / 3; }
-    .div2 { grid-area: 4 / 2 / 5 / 3; }
-    .div3 { grid-area: 4 / 4 / 5 / 5; }
-    .div4 { grid-area: 2 / 4 / 3 / 5; }
-    .div5 { grid-area: 3 / 3 / 4 / 4; }
+    h1 {
+        font-size: 3rem;
+
+        @media screen and (max-width: 500px){
+            font-size: 2rem;
+        }
+    }
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        // background: red;
+        min-height: 500px;
+         div.card { 
+             background: #c7c1c1b5; 
+             flex: 1 1 300px;
+             margin: 20px;
+             height: 300px;
+             
+             header {
+                 width: 100%;
+                 height: 70%;
+                 color: white;
+                 justify-content: center;
+                 align-items: center;
+                 background: lighten($color: red, $amount: 4);
+                 position: relative;
+                 img {
+                     max-height: 100%;
+                     width: 100%;
+                     margin-bottom: 0px;
+
+                 }
+                 h3 {
+                     color: white;
+                     position: absolute;
+                     top: 0;
+                 }
+
+             }
+             footer {
+                 display: flex;
+                 flex-direction: column;
+                 justify-content: center;
+                 padding: 10px 30px;
+                 max-height: 30%;
+                 position: relative;
+                //  background: red;
+                h3 {
+                    margin-bottom: 0;
+                }
+                 a {
+                     color: black;
+                 }
+                
+             }
+             @media screen and (max-width:500px){
+                 margin: 20px 0px;
+             }
+            }
+        
+        }
+        
+}

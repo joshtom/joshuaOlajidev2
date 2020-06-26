@@ -1,0 +1,25 @@
+.About {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+
+    
+    .section__title {
+            display: flex;
+                
+            
+               div.line {
+                   width: 10px;
+                   height: 2px;
+                   background: black;
+               }
+           
+    }
+    // * {
+    //     flex: 1 1 500px;
+    //     margin: 20px;
+    // }
+}

@@ -1,0 +1,14 @@
+.project {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    background: red;
+    }
+    
+    .div1 { grid-area: 2 / 2 / 3 / 3; }
+    .div2 { grid-area: 4 / 2 / 5 / 3; }
+    .div3 { grid-area: 4 / 4 / 5 / 5; }
+    .div4 { grid-area: 2 / 4 / 3 / 5; }
+    .div5 { grid-area: 3 / 3 / 4 / 4; }

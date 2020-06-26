@@ -4,6 +4,7 @@ import Banner from "../components/Banner"
 import SEO from "../components/SEO/seo"
 import More from "../components/More"
 import About from "../components/About"
+import Project from "../components/Project"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Banner />
       <More />
       <About />
+      <Project />
     </>
   )
 }

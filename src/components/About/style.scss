@@ -1,25 +1,89 @@
 .About {
-    position: relative;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     background: yellow;
-
+    padding: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: -5;
     
     .section__title {
             display: flex;
-                
             
-               div.line {
-                   width: 10px;
-                   height: 2px;
-                   background: black;
-               }
            
     }
-    // * {
-    //     flex: 1 1 500px;
-    //     margin: 20px;
-    // }
+    div {
+        flex: 1 1 500px;
+        margin: 10px;
+        // background: rosybrown;
+
+        &:nth-child(1) {
+            padding: 40px;       
+        }
+    }
+    div:nth-child(2) {
+        flex-basis: auto;
+
+        .about__image {
+            position: relative;
+            background-color: blue;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            
+
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                border: 2px solid red;
+                height: 100%;
+                width: 100%;
+                left: 1.5rem;
+                top: 1.5rem;
+                z-index: -1;
+            }
+
+            &:hover {
+
+            }
+        }
+
+        
+    }
+
+    @media screen and (max-width: 548px){
+        div {
+            &:nth-child(1) {
+                padding: 0px;       
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 465px){
+        div {
+            &:nth-child(2) {
+                .about__image {
+                    width: 250px;
+                    height: 250px;
+                }     
+            }
+        }
+        
+    }
+    @media screen and (max-width: 361px){
+        div {
+            &:nth-child(2) {
+                .about__image {
+                    width: 90%;
+                    height: 250px;
+                    margin: 0;
+                }     
+            }
+        }
+        
+    }
+
 }

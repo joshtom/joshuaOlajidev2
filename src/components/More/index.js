@@ -9,7 +9,7 @@ export default function More() {
         <div>
             <h1>iDesign.</h1>
             <p>
-                I may not be the perfect guy for your next design project, but I can take your design to the next level with my stylesheet superpowers (o\o)
+                I may not be the perfect guy for your next design project, but I can take any design to the next level with my stylesheet superpowers (o\o)
             </p>
         </div>
         <div>

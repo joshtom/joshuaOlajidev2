@@ -1,12 +1,13 @@
 .About {
     min-height: 100vh;
+    min-width: 100%;
     display: flex;
     align-items: center;
     background: yellow;
-    padding: 30px;
     flex-wrap: wrap;
     position: relative;
     z-index: -5;
+    padding: 30px;
     
     .section__title {
             display: flex;
@@ -19,7 +20,6 @@
         // background: rosybrown;
 
         &:nth-child(1) {
-            padding: 40px;
             
             h1 {
                 font-size: 3rem;
@@ -65,7 +65,16 @@
     @media screen and (max-width: 548px){
         div {
             &:nth-child(1) {
-                padding: 0px;       
+                padding: 0px;  
+                
+                h1 {
+                    font-size: 3rem;
+                    width: 15rem;
+    
+                    @media screen and (max-width: 500px){
+                        font-size: 2rem;
+                    }
+                }
             }
         }
         
@@ -85,6 +94,7 @@
     @media screen and (max-width: 361px){
         div {
             &:nth-child(2) {
+                margin-bottom: 20px;
                 .about__image {
                     width: 90%;
                     height: 250px;
@@ -96,3 +106,4 @@
     }
 
 }
+

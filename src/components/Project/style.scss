@@ -107,6 +107,7 @@
             transition: all 0.25s ease-in-out;
             overflow: hidden;
             z-index: 1;
+            display: none;
 
             &::before {
                 position: absolute;
@@ -122,13 +123,22 @@
 
             }
 
-            &:hover {
+            &:hover, &:focus-within {
                 color: white;
                 &::before {
                     transform: translateX(0px);
                 }
             }
             
+        }
+
+        @media screen and (max-width: 500px) {
+            .card:nth-child(4), .card:nth-child(5), .card:nth-child(6) {
+                display: none;
+            }
+            button {
+                display: block;
+            }
         }
         
 }

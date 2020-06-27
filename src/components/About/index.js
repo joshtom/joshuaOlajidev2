@@ -10,7 +10,7 @@ export default function About() {
                 I've built products that solve real-life problems ranging from Businesses to companies with focus on creating fast, and accessible user experiences using advanced web technologies. Not only these makes me standout, but paying attention to every detail from any DESIGN which makes me deliver clean, elegant and pixel-perfect solutions.
                 </p> 
                 <p>
-                I am passionate about Web Performance, Javascript Applications, Great user experiences, and Open Source. I am also open for remote or contract work.
+                I am passionate about Web Performance, Javascript Applications, Great user experiences, and Open Source. I am also open for onsite, remote or contract work.
                 </p>
             </div>
             <div>

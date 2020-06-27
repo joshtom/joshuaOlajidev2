@@ -9,7 +9,6 @@ export default function Banner () {
             
             <div className={styles.scroll}>
                <div className={styles.scroller}>
-                   {/* <DownArrow className={styles.downArrow}/> */}
                    <div></div>
                 </div> 
             </div>
@@ -17,12 +16,14 @@ export default function Banner () {
 
 
             <div className={styles.bannerText}>
-                <h1 className={styles.bannerTextHeading}>
+                {/* <h1 className={styles.bannerTextHeading}>
                     HELLO.
-                </h1> 
+                </h1>  */}
+
+                <p>Hello, I'm</p>
 
                 <h1>
-                    I'm Joshua Olajide
+                    Joshua Olajide
                 </h1>
 
                 <h4>

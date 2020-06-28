@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+import { graphql } from "gatsby"
+// import Img from "gatsby-image"
+import Image from "../../images/setup.jpg"
 import "./style.scss";
-import Image from '../../images/setup.jpg'
 
-export default function Project() {
+const Project = ({ data }) =>{
     const [isToggle, setIsToggle] = useState(false);
     const card = useRef(null);
     const cards = useRef(null);
@@ -28,7 +30,8 @@ export default function Project() {
         <div className="container">
            <div className="card">
                 <header>
-                    <img src={Image} alt="showcase1"/>
+                    {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
+                    <img src={Image}/>
                 </header> 
                 <footer>
                     <h4><a href="/joshuaolajide.netlify.app">joshuaolajide</a></h4> <span className="check">|</span> 
@@ -65,3 +68,16 @@ export default function Project() {
         </div>
     )
 }
+
+export default Project
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "setup.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300, maxHeight: 300) {
+            ...GatsbyImageSharpFluid_noBase64
+        }
+      }
+    }
+  }`

@@ -23,11 +23,11 @@ export default function Banner () {
                 <p>Hello, I'm</p>
 
                 <h1>
-                    Joshua Olajide
+                    Joshua Olajide,
                 </h1>
 
                 <h4>
-                    <center>Frontend Developer and LifeLong Learner </center>
+                    <center>Frontend Developer && LifeLong Learner. </center>
                 </h4>
 
                 <section className={styles.bannerTextSection}>
@@ -35,7 +35,7 @@ export default function Banner () {
                         I love to create Scalable, Fast and mobile-first web Applications.
                     </p>
                     <p>
-                        Come with me and Get ready to turn your Imaginations into reality
+                        Work with me and Get ready to turn your Imaginations into reality
                     </p>
                 </section>
             </div>

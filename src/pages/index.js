@@ -5,6 +5,7 @@ import SEO from "../components/SEO/seo"
 import More from "../components/More"
 import About from "../components/About"
 import Project from "../components/Project"
+import Contact from "../components/Contact"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <More />
       <About />
       <Project />
+      <Contact />
     </>
   )
 }

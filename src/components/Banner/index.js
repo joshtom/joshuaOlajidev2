@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.css";
-import DownArrow from "../../assets/downArrow.svg";
 
 
 export default function Banner () {
@@ -12,13 +11,8 @@ export default function Banner () {
                    <div></div>
                 </div> 
             </div>
-            
-
 
             <div className={styles.bannerText}>
-                {/* <h1 className={styles.bannerTextHeading}>
-                    HELLO.
-                </h1>  */}
 
                 <p>Hello, I'm</p>
 
@@ -38,6 +32,9 @@ export default function Banner () {
                         Work with me and Get ready to turn your Imaginations into reality
                     </p>
                 </section>
+            </div>
+            <div className={styles.experience}>
+
             </div>
             
         </div>

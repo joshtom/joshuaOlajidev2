@@ -26,7 +26,7 @@
     border-radius: 20px;
 }
 
-.banner > .scroll .scroller{ 
+.banner > .scroll .scroller { 
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -63,7 +63,7 @@
     align-items: center;
     z-index: 1000;
     color: black;
-    /* background: red; */
+    background: red;
     width: 90%;
 }
 
@@ -140,6 +140,10 @@
     .banner div.bannerText > h1.bannerTextHeading {
         font-size: 4.5rem;
     }
+}
+
+.banner .experience {
+    background: red;
 }
 
 

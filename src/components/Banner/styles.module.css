@@ -2,11 +2,11 @@
    position: relative;
    background: #eee;
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
    width: 100%;
    min-height: 100vh;
    z-index: -100;
-   /* padding: 20px; */
 }
 
 
@@ -56,35 +56,63 @@
 }
 
 
- .banner div.bannerText {
+.banner > div {
+    flex: 1 1;
+}
+.banner div.bannerText {
     display: flex;
     flex-direction: column;
-    justify-self: center;
-    align-items: center;
     z-index: 1000;
     color: black;
-    background: red;
-    width: 90%;
+    flex-basis: 65%;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner div.bannerText > * {
-    margin: auto;
+.banner div.bannerText > div { /* Used to create space vertically between the elements */
+    flex-shrink: 1;
+    max-width: 500px;
 }
 
-.banner div.bannerText > p { 
+.banner div.bannerText  p { 
     margin-bottom: 0;
 }
-.banner div.bannerText > h1 {
+.banner div.bannerText h1.avatarName {
   margin-bottom: 0;
 }
-
-.banner div.bannerText > h4 {
-    margin-top: 5px;
-    margin-bottom: 30px;
+.banner div.bannerText h1.jobTitle {
     font-size: 4rem;
-
+    line-height: 4rem;
+    color: red;
 }
 
+.banner div.bannerText .bannerTextSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-right: 10px;
+}
+.banner div.bannerText .bannerTextSection p{
+    margin: 10px;
+}
+
+@media screen and (max-width: 640px) {
+    
+    .banner div.bannerText > div {
+        padding-top: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .banner div.bannerText h1.jobTitle {
+        font-size: 3rem;
+        line-height: 3rem;
+        margin-bottom: 20px;
+    }
+ 
+}
+/* 
 @media screen and (max-width: 950px){
     .banner div.bannerText > h4 {
         font-size: 3rem;
@@ -107,20 +135,15 @@
         font-size: 1.5rem;
         margin-bottom: 20px;
       }
-}
+} */
 
-.banner div.bannerText > .bannerTextSection {
-    display: flex;
-    justify-content: space-between;
-    width: 500px;
-    align-items: center;
-}
 
-.banner div.bannerText > .bannerTextSection p {
-    /* margin-left: 20px; */
-}
 
-@media screen and (max-width: 600px) {
+
+
+
+
+/* @media screen and (max-width: 600px) {
     .banner div.bannerText > h1.bannerTextHeading {
         font-size: 5.5rem;
     }
@@ -140,10 +163,11 @@
     .banner div.bannerText > h1.bannerTextHeading {
         font-size: 4.5rem;
     }
-}
+} */
 
 .banner .experience {
     background: red;
+    flex-basis: 35%;
 }
 
 

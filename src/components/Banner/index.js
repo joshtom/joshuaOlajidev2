@@ -14,15 +14,16 @@ export default function Banner () {
 
             <div className={styles.bannerText}>
 
-                <p>Hello, I'm</p>
+                <div>
+                    <p>Hello, I am</p>
 
-                <h1>
-                    Joshua Olajide,
+                <h1 className={styles.avatarName}>
+                    Joshua Olajide -
                 </h1>
 
-                <h4>
-                    <center>Frontend Developer && LifeLong Learner. </center>
-                </h4>
+                <h1 className={styles.jobTitle}>
+                    Frontend Developer.
+                </h1>
 
                 <section className={styles.bannerTextSection}>
                     <p>
@@ -32,9 +33,10 @@ export default function Banner () {
                         Work with me and Get ready to turn your Imaginations into reality
                     </p>
                 </section>
+                </div>
             </div>
             <div className={styles.experience}>
-
+                <h1> Experience </h1>
             </div>
             
         </div>

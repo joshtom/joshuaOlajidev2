@@ -35,11 +35,11 @@ export default function Banner () {
                 </section>
                 </div>
 
-                <div className={styles.bannerScroll}>
-               <div className={styles.bannerScroller}>
-                   <div></div>
-                </div> 
-            </div>
+                <section className={styles.bannerScroll}>
+               <section className={styles.bannerScroller}>
+                   <section></section>
+                </section> 
+            </section>
             </div>
             <div className={styles.experience}>
                 <h1> Experience </h1>

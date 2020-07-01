@@ -16,12 +16,12 @@ export default function Banner() {
 
     useEffect(() => {
         const tl = gsap.timeline({ paused: true });
-        tl.fromTo(greet.current, .2, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
-        tl.fromTo(name.current, .2, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
-        tl.fromTo(title.current, .2, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
-        tl.fromTo(left.current, .2, { x: -100, opacity: 0 }, { x: 0, opacity: 1});
-        tl.fromTo(right.current, .2, { x: 100, opacity: 0 }, { x: 0, opacity: 1});
-        tl.fromTo(experience.current, .5, { opacity: 0 }, { opacity: 1});
+        tl.fromTo(greet.current, .4, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
+        tl.fromTo(name.current, .4, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
+        tl.fromTo(title.current, .4, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
+        tl.fromTo(left.current, .4, { x: -100, opacity: 0 }, { x: 0, opacity: 1});
+        tl.fromTo(right.current, .4, { x: 100, opacity: 0 }, { x: 0, opacity: 1});
+        // tl.fromTo(experience.current, .5, { opacity: 0 }, { opacity: 1});
         tl.play();
     },[])
 

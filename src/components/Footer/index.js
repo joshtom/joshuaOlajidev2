@@ -5,7 +5,7 @@ export default function Footer() {
     return(
         <div className="Footer">
             <p>
-                &copy; joshua olajide
+                &copy; 2020 Joshua Olajide
             </p>
         </div>
     )

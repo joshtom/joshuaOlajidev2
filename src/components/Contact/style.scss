@@ -72,6 +72,7 @@ $light: #edddd4;
             color: $light;
             font-weight: bold;
             border: none;
+            
         }
     }
         
@@ -88,7 +89,6 @@ $light: #edddd4;
             position: relative;
             transition: all 0.25s ease-in-out;
             overflow: hidden;
-            z-index: 1;
             display: none;
 
             &::before {

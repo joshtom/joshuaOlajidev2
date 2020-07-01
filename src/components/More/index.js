@@ -1,12 +1,13 @@
 import React from "react";
-import Abstract from "../../assets/abstract.svg";
 import "./style.scss";
 
 export default function More() {
+
+   
+
     return(
-        <div className="more">
-            {/* <Abstract className="abstract-image"/> */}
-        <div>
+        <div className="more" >
+        <div >
             <h1>iDesign.</h1>
             <p>
                 I may not be the perfect guy for your next design project, but I can take any design to the next level with my stylesheet superpowers (o\o)

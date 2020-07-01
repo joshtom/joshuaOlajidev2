@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import "./style.scss";
 
 export default function About() {
+        const aboutContainer = useRef(null);
+        const image = useRef(null);
+     useEffect(() => {
+        if (typeof window !== `undefined`) {
+            gsap.registerPlugin(ScrollTrigger)
+            gsap.core.globals('ScrollTrigger', ScrollTrigger)
+            }
+
+            const tl = gsap.timeline({
+                paused: true,
+                scrollTrigger: {
+                  trigger: aboutContainer.current,
+                  scrub: true,
+                  start: "-100%"
+                }
+              });
+
+              tl.fromTo(image.current, .4, { x: 100 }, { x: 0})
+    }, [])
     return(
-        <div className="About">
+        <div className="About" ref={aboutContainer}>
             <div>
                 <h1>Over the past few years,</h1>  
                 <p>
@@ -14,7 +35,7 @@ export default function About() {
                 </p>
             </div>
             <div>
-                <div className="about__image">
+                <div className="about__image" ref={image}>
                     
                 </div>
             </div>

@@ -1,6 +1,6 @@
 .banner {
    position: relative;
-   background: #eee;
+   background: #f8f8f9;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -22,7 +22,7 @@
     align-items: center;
     justify-self: center;
     align-items: center;
-    background: tomato;
+    background: #197278;
     border-radius: 20px;
 }
 
@@ -76,15 +76,17 @@
 }
 
 .banner div.bannerText  p { 
+    color: #4c4c55;
     margin-bottom: 0;
 }
 .banner div.bannerText h1.avatarName {
+  color: #222228;
   margin-bottom: 0;
 }
 .banner div.bannerText h1.jobTitle {
     font-size: 4rem;
     line-height: 4rem;
-    color: red;
+    color: #197278;
 }
 
 .banner div.bannerText .bannerTextSection {
@@ -127,7 +129,7 @@
         align-items: center;
         justify-self: center;
         align-items: center;
-        background: tomato;
+        background: #197278;
         border-radius: 20px;
     }
     
@@ -175,12 +177,13 @@
 }
 
 .banner .experience {
-    background: red;
+    background: #283d3b;
     flex-basis: 35%;
     display: flex;
     flex-direction: column;
     height: auto;
     align-items: center;
+    justify-content: center;
 }
 
 .banner .experience h1{

@@ -5,7 +5,7 @@ import "./style.scss";
 export default function More() {
     return(
         <div className="more">
-            <Abstract className="abstract-image"/>
+            {/* <Abstract className="abstract-image"/> */}
         <div>
             <h1>iDesign.</h1>
             <p>

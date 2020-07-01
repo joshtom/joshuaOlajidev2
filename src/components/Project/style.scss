@@ -1,6 +1,13 @@
+$green: #197278;
+$darkgreen: #283d3b;
+$brown: #eaeaee;
+$creamy: #b0b0bb;
+$creamywhite: #f8f8f9;
+$dark: #222228;
 .projects {
     min-height: 100vh;
     padding: 50px;
+    background: $brown;
 
     @media screen and (max-width:500px){
         padding: 30px;
@@ -8,17 +15,24 @@
     
     h1 {
         font-size: 3rem;
+        color: $dark;
 
         @media screen and (max-width: 500px){
             font-size: 2rem;
         }
+    }
+    p {
+        color: $dark;
     }
     .container {
         display: flex;
         flex-flow: row wrap;
         min-height: 500px;
          div.card { 
-             background: #c7c1c1b5; 
+            background: #bdc3c7;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, $brown, #bdc3c7); 
+            background: linear-gradient(to bottom, $brown, #bdc3c7); 
+            
              flex: 1 1 300px;
              margin: 20px;
              height: 300px;
@@ -89,7 +103,7 @@
         
         }
 
-        button {
+        button.toggle {
             width: 10rem;
             text-transform: uppercase;
             border: 1px solid red;

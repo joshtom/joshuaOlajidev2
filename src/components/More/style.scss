@@ -1,11 +1,15 @@
+$creamy: #FEF5F0;
+$dark: #4c4c55;
+$brown: #772e25;
+
 .more {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    min-height: 100vh;
+    min-height: 400px;
     align-items: center;
     justify-content: center;
-    background-color: brown;
+    background-color: $creamy;
     padding: 30px;
     * {
         flex: 1 1 250px;
@@ -14,7 +18,7 @@
     div {
         // background: tomato;
         h1 {
-            color: tomato;
+            color: $brown;
             font-size: 3rem;
 
             @media screen and (max-width: 500px){
@@ -22,7 +26,7 @@
             }
         }
         p {
-            color: #fff;
+            color: $dark;
         }
     }
     .abstract-image {

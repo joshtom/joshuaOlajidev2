@@ -34,7 +34,7 @@ export default function Banner () {
                         I love to create Scalable, Fast and mobile-first web Applications.
                     </p>
                     <p>
-                        Work with me and Get ready to turn your Imaginations into reality
+                        Put on a smile and Get ready to turn your Imaginations into reality
                     </p>
                 </section>
                 </div>

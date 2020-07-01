@@ -163,9 +163,10 @@
     }
 
     /* End of scroller */
-
  
 }
+
+
 
 
 @media screen and (max-width: 394px) {
@@ -175,6 +176,7 @@
         margin-top: 10px !important;
     }
 }
+
 
 .banner .experience {
     background: #283d3b;
@@ -186,11 +188,13 @@
     justify-content: center;
 }
 
-.banner .experience h1{
-    color: #eee;
-    /* left: -3rem; */
-    /* transform: rotate(-90deg); */
+
+@media screen and (max-width: 824px) {
+    .banner .experience {
+        display: none;
+    }
 }
+
 
 
 

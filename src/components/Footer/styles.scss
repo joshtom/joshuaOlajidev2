@@ -1,0 +1,14 @@
+$dark: #222228;
+$light: #edddd4;
+.Footer {
+    background: $dark;
+    height: 20px;
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    p {
+        color: $light;
+    }
+}

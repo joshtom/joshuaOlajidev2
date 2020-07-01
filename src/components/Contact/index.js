@@ -18,7 +18,7 @@ export default function Contact() {
         <div className="container">
            <form>
                <div className="form-control">
-                    <label id="name">NAME</label>
+                    <label for="name">NAME</label>
                     <input type="text" 
                     placeholder="john Doe"
                     required
@@ -27,17 +27,17 @@ export default function Contact() {
                </div>
 
                <div className="form-control">
-                    <label id="contact">EMAIL</label>
+                    <label for="email">EMAIL</label>
                     <input type="email" 
                     placeholder="example@yourdomain.com"
                     required
-                    id="contact"
+                    id="email"
                     />
                </div>
 
                <div className="form-control">
-                    <label id="name">MESSAGE</label>
-                    <textarea placeholder="Hi there...">
+                    <label for="message">MESSAGE</label>
+                    <textarea placeholder="Hi there..." id="message">
 
                     </textarea>    
                </div>

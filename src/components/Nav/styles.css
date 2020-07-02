@@ -4,7 +4,6 @@
     top: 0;
     z-index: 1;
     width: 100%;
-    /* background: red; */
 }
 
 .header .nav {
@@ -32,12 +31,9 @@
     justify-self: end;
     display: flex;
     align-items: center;
-    padding: 12px;
+    padding: 10px;
     cursor: pointer;
-    background: #FEF5F0;
     border-radius: 50%;
-    margin-right: 10px;
-    
 }
 
 .header .themeToggler > * {
@@ -58,10 +54,6 @@
     transition: 300ms all ease-in-out;
     cursor: pointer;
     padding: 10px;
-    background: #FEF5F0;
-    /* position: absolute;
-    right: 70px;
-    z-index: 1000; */
 }
 
 /* @media screen and (min-width: 1000px) {
@@ -116,12 +108,10 @@
 
 
 .header .navToggle {
-    background: #334d50;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #cbcaa5, #334d50);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #cbcaa5, #334d50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: tomato;
     position: fixed;
     height: 100vh;
+    /* clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%); */
     right: 0;
     width: 35vw;
     transform: translateX(1000px);

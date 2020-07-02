@@ -22,7 +22,9 @@
     color: white;
     padding: 10px;
     align-self: center;
+    cursor: pointer;
 }
+
 
 .header .themeToggler {
     grid-area: themeToggler;
@@ -111,6 +113,10 @@
 
 .header .navToggle ul li{
     margin-bottom: -5px;
+}
+
+.header .navToggle ul li a{
+    cursor: pointer;
 }
 
 @media screen and (max-width: 980px) {

@@ -1,21 +1,19 @@
 import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import "./styles.css";
 import gsap from 'gsap';
-import Sunlight from "../../assets/sunlight.svg";
-// import Close from "../../assets/close.svg";
 
 
 export default function Navigation(props) {
     const [ isToggled, setToggled ] = useState(false)
     const tl = useRef();
-    // const animateHamburger = TweenLite;
     const navToggle = useRef(null);
     const navToggleLinks = useRef(null);
     const header = useRef(null);
     const Link = useRef(null);
     const socialLink = useRef(null);
 
-    function useLockBodyScroll() {
+    function useLockBodyScroll(props) {
         useLayoutEffect(() => {
          // Get original value of body overflow
          const originalStyle = window.getComputedStyle(document.body).overflow;  
@@ -51,26 +49,10 @@ export default function Navigation(props) {
         }
       }, [isToggled]);
 
-
-    // React.useEffect(() => {
-    //     // add when mounted
-    //     document.body.addEventListener("click", () => {
-    //         tl.current.reverse()
-    //         setToggled(false)
-    //     });
-    //     // return function to be called when unmounted
-    //     return () => {
-    //       document.body.removeEventListener("click", () => {
-    //           tl.current.reverse()
-    //             setToggled(false)
-    //       });
-    //     };
-    //   }, []);
-
     return (
         <header className="header" ref={header}>
             <nav className="nav">
-                <div className="logo">
+                <div className="logo" style={props.logo} onClick={(e) => {e.preventDefault(); scrollTo('#banner')}}>
                 JO
                 </div>
                 <div className="themeToggler" >
@@ -98,7 +80,7 @@ export default function Navigation(props) {
                             <li ref={Link}
                             onClick={() => setToggled(!isToggled)}
                             >
-                                <a href="#" id="about">About</a>
+                                <a href="#about" onClick={(e) => {e.preventDefault(); scrollTo('#about')}}>About</a>
                             </li>
         
                             <li ref={Link}
@@ -110,13 +92,13 @@ export default function Navigation(props) {
                             <li ref={Link}
                             onClick={() => setToggled(!isToggled)}
                             >
-                                <a href="#" id="project">Project</a>
+                                <a href="#project" onClick={(e) => {e.preventDefault(); scrollTo('#project')}}>Project</a>
                             </li>
         
                             <li ref={Link}
                             onClick={() => setToggled(!isToggled)}
                             >
-                                <a href="#" id="contact">Contact</a>
+                                <a href="#contact" onClick={(e) => {e.preventDefault(); scrollTo('#contact')}}>Contact</a>
                             </li>
         
                             <li ref={socialLink}

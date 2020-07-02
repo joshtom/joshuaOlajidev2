@@ -11,6 +11,8 @@ import Footer from "../components/Footer"
 export default function Home() {
   const [ navState, setNavState ] = useState('black');
   const [ themeState, setThemeState ] = useState('black');
+  const [ logoState, setLogoState ] = useState('black');
+  const [ transState, setTransState ] = useState(0);
 
   useEffect(() => {
     let windowSubscribed = true;
@@ -26,7 +28,7 @@ export default function Home() {
     const scrolled = winScroll / height;
     
     if (scrolled <= 0.37) { setNavState('#000'); setThemeState('#000'); }
-    if (scrolled >= 0.37) { setNavState('#F8F8F9'); setThemeState('#F8F8F9'); }
+    if (scrolled >= 0.37) { setNavState('#F8F8F9'); setThemeState('#F8F8F9'); setLogoState('#307378'); setTransState('20px')}
     if (scrolled >= 0.60) { setNavState('#36363e'); setThemeState('#36363e'); }
     if (scrolled >= 0.95) { setNavState('#edddd4'); setThemeState('#edddd4'); }
 
@@ -35,7 +37,11 @@ export default function Home() {
   return (
     <>
       <SEO title="Joshua Olajide | Frontend Developer"/>
-      <Navigation stick={{backgroundColor: `${navState}`}} theme={{ fill: `${themeState}` }}/>
+      <Navigation 
+      stick={{backgroundColor: `${navState}`}} 
+      theme={{ fill: `${themeState}` }}
+      logo={{ backgroundColor: `${logoState}`, }}
+      />
       <Banner />
       <More />
       <About />

@@ -31,7 +31,7 @@ module.exports = {
         }
       }
     },
-    
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     

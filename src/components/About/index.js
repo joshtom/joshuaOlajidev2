@@ -23,7 +23,7 @@ export default function About(props) {
               tl.fromTo(image.current, .4, { x: 100 }, { x: 0})
     }, [])
     return(
-        <div className="About" ref={aboutContainer}>
+        <div className="About" ref={aboutContainer} id="about">
             <div>
                 <h1>Over the past few years,</h1>  
                 <p>

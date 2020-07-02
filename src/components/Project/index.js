@@ -24,22 +24,8 @@ const Project = ({ data }) =>{
                 cardss.current.style.display = 'none'
                 }
     }
-    // useEffect(() => {
-    //     if (isToggle) {
-    //     card.current.style.display = 'block'
-    //     cards.current.style.display = 'block'
-    //     cardss.current.style.display = 'block'
-    //         }
-        
-    //     else {
-    //         card.current.style.display = 'none'
-    //     cards.current.style.display = 'none'
-    //     cardss.current.style.display = 'none'
-    //     }
-        
-    // }, [isToggle])
     return(
-        <div className="projects">
+        <div className="projects" id="project">
             <h1> Projects. </h1>            
             <p> Some selected projects I have worked on. </p>
         <div className="container">

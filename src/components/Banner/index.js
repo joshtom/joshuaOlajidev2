@@ -25,7 +25,7 @@ export default function Banner() {
     },[])
 
     return(
-        <div className={styles.banner}>
+        <div className={styles.banner} id="banner">
             
             <div className={styles.scroll}>
                <div className={styles.scroller}>

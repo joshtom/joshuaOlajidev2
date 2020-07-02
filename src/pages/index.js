@@ -12,7 +12,6 @@ export default function Home() {
   const [ navState, setNavState ] = useState('black');
   const [ themeState, setThemeState ] = useState('black');
   const [ logoState, setLogoState ] = useState('black');
-  const [ transState, setTransState ] = useState(0);
 
   useEffect(() => {
     let windowSubscribed = true;
@@ -27,8 +26,8 @@ export default function Home() {
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = winScroll / height;
     
-    if (scrolled <= 0.37) { setNavState('#000'); setThemeState('#000'); }
-    if (scrolled >= 0.37) { setNavState('#F8F8F9'); setThemeState('#F8F8F9'); setLogoState('#307378'); setTransState('20px')}
+    if (scrolled <= 0.37) { setNavState('#000'); setThemeState('#000'); setLogoState('#000');}
+    if (scrolled >= 0.37) { setNavState('#F8F8F9'); setThemeState('#F8F8F9'); setLogoState('#307378');}
     if (scrolled >= 0.60) { setNavState('#36363e'); setThemeState('#36363e'); }
     if (scrolled >= 0.95) { setNavState('#edddd4'); setThemeState('#edddd4'); }
 

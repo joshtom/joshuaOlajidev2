@@ -22,8 +22,6 @@
     color: white;
     padding: 10px;
     align-self: center;
-    /* box-shadow:  20px -20px 27px #387aa0, 
-             -20px 20px 27px #72f8ff; */
 }
 
 .header .themeToggler {
@@ -100,16 +98,19 @@
 
 
 .header .navToggle {
-    background: tomato;
+    background: #307378;
     position: fixed;
     height: 100vh;
-    /* clip-path: polygon(26% 0, 100% 0, 100% 100%, 0% 100%); */
     right: 0;
     width: 35vw;
-    transform: translateX(1000px);
+    transform: translateX(500px);
     z-index: -1;
     top: 0;
     padding: 20px;
+}
+
+.header .navToggle ul li{
+    margin-bottom: -5px;
 }
 
 @media screen and (max-width: 980px) {
@@ -123,7 +124,7 @@
         width: 100vw;
     }
     .header .navToggle ul li{
-        margin-bottom: 30px;
+        margin-bottom: 35px;
     }
 }
 
@@ -136,14 +137,22 @@
 }
 
 .header .navToggle .link {
-    /* background: tomato; */
     grid-area: link;
     align-self: center;
     justify-self: start;
+    margin-bottom: 0;
 }
 
 .header .navToggle .link li {
     list-style-type: none;
+}
+
+.header .navToggle .link ul {
+    margin-bottom: 0;
+}
+
+.header .navToggle .link li:last-child {
+    margin-bottom: 0;
 }
 
 .header .navToggle .link li > a {
@@ -151,6 +160,16 @@
     text-decoration: none;
     font-size: 3.5rem;
     position: relative;
+}
+
+.header .navToggle .con {
+    margin-bottom: 10px;
+}
+
+.header .navToggle .con h3{
+    color: #cdfcff69;
+    font-weight: 100;
+    font-size: 1rem;
 }
 
 .header .navToggle .link li > .social {

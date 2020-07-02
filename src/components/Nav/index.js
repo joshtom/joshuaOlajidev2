@@ -122,12 +122,19 @@ export default function Navigation(props) {
                             <li ref={socialLink}
                             onClick={() => setToggled(!isToggled)}
                             >
+                                <section className="con">
+                                <h3> SAY HELLO </h3>
+                                <p> joshuaolajide@gmail.com </p>
+                                </section>
                                 <div className="social">
                                     <a href="#" className="gh">GH</a>
                                     <a href="#" className="tw">TW</a>
                                     <a href="#" className="ln">LN</a>
                                     <a href="#" className="md">MD</a>
                                 </div>
+
+
+
                             </li>
                         </ul>
     

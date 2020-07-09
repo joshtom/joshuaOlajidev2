@@ -12,7 +12,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        // path: path.join(__dirname, `src`, `images`), 
+        path: `${__dirname}/src/images`, // To change if it breaks anything
       },
     },
     `gatsby-transformer-sharp`,
@@ -30,6 +31,13 @@ module.exports = {
           include: /assets/ // See below to configure properly
         }
       }
+    },
+    {
+      resolve: `gatsby-styled-components-dark-mode`,
+      options: {
+          light: { mainColor: '#FEF5F0'},
+          dark: { mainColor: 'black'},
+      },
     },
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,

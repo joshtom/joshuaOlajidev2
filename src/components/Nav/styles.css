@@ -74,7 +74,7 @@
 }
 
 
-.header .hamburger div:nth-child(3) {
+.header .hamburger div:nth-child(3) { /* TO be continued from here*/
     width: 15px;
   	height: 2px;
  	margin: 4px 0;

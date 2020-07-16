@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import {Layout} from "../components/Layout/layout.js"
 import Navigation from "../components/Nav"
 import Banner from "../components/Banner"
 import SEO from "../components/SEO/seo"
@@ -36,17 +37,20 @@ export default function Home() {
   return (
     <>
       <SEO title="Joshua Olajide | Frontend Developer"/>
-      <Navigation 
+      <Layout>
+      {/* <Navigation 
       stick={{backgroundColor: `${navState}`}} 
       theme={{ fill: `${themeState}` }}
+      MoonTheme={{ fill: `${themeState}` }}
       logo={{ backgroundColor: `${logoState}`, }}
-      />
+      /> */}
       <Banner />
       <More />
       <About />
       <Project />
       <Contact />
       <Footer />
+      </Layout>
     </>
   )
 }

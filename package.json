@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default-dark-mode",
+  "name": "joshua-olajide-version-2",
   "private": false,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Alexandre Ramos <alexandresantos84@gmail.com>",
+  "author": "Joshua Olajide <joshuaolarjide@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.7",
@@ -27,7 +27,8 @@
   "keywords": [
     "gatsby",
     "dark",
-    "styled-components"
+    "styled-components",
+    "portfolio"
   ],
   "license": "MIT",
   "scripts": {
@@ -41,9 +42,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexandreramosdev/gatsby-starter-default-dark-mode"
+    "url": "https://github.com/joshtom/joshuaOlajidev2.git"
   },
   "bugs": {
-    "url": "https://github.com/alexandreramosdev/gatsby-starter-default-dark-mode/issues"
+    "url": "https://github.com/joshtom/joshuaOlajidev2.git/issues"
   }
 }

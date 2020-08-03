@@ -52,6 +52,7 @@ import {
               opacity: 1,
               ease: "back.out(1.7)"
           })
+          .fromTo(navToggleLinks.current,  .4,{ y: 10, opacity: 0 }, { y: 0, opacity: 1, stagger: true })
           .fromTo(socialLink.current,  .4,{ y: 10, opacity: 0 }, { y: 0, opacity: 1 })
           .play(); //Animating the sidebar
 
@@ -59,10 +60,10 @@ import {
       //  stickTl.current.to(stick3.current, .1, { xPercent:  -10, opacity: 0 })
       //  .to(stick2.current, .1, { rotate: -45,})
       // .to(stick1.current, .1, { y: 6, rotate: 45,})
-      stickTl.current.to(stick2.current, { duration: .1, ease: "elastic.out(1, 0.3)", x: -10 });
+      stickTl.current.to(stick2.current, { duration: .1, ease: "elastic.out(1, 0.3)", x: -10, });
       //  stickTl.current.to(stick2.current, .1, { ease: "bounce.out", xPercent: -10 })
-       stickTl.current.to(stick3.current, .1, { ease: "elastic.out(1, 0.3)", y: 3 })
-       stickTl.current.to(stick1.current, .1, { y: -3 })
+       stickTl.current.to(stick3.current, .1, { ease: "elastic.out(1, 0.3)", y: 3,})
+       stickTl.current.to(stick1.current, .1, { y: -3, })
   }, []);
 
 
@@ -101,7 +102,9 @@ import {
   return (
       <HeaderWrapper ref={header}>
           <Nav>
-              <Logo onClick={(e) => {e.preventDefault(); scrollTo('#banner')}} style={logo}> JO </Logo>
+              <Logo 
+              onClick={(e) => {e.preventDefault(); scrollTo('#banner')}} 
+              style={logo}> <span style={{color: 'var(--textInverse)'}}> JOSHUA. </span> </Logo>
               <ThemeToggler>
                   <div onClick={themeToggle}>
                     {theme === "dark" ? "☀" : "☾"}
@@ -109,9 +112,9 @@ import {
               </ThemeToggler> 
 
               <Hamburger onClick={() => setToggled(!isToggled)}>
-                      <Stick ref={stick1} style={stick}></Stick>
-                      <Stick ref={stick2} style={stick}></Stick>
-                      <Stick ref={stick3} style={stick}></Stick>
+                      <Stick ref={stick1}></Stick>
+                      <Stick ref={stick2}></Stick>
+                      <Stick ref={stick3}></Stick>
               </Hamburger>
           </Nav>
               <NavToggle

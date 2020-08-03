@@ -14,24 +14,24 @@ export const Nav = styled.div`
 display: grid;
 grid-template-columns: repeat(14, 1fr);
 grid-template-areas: 
-    "logo . . . . . . . . . . . themeToggler hamburger"; 
+    ". logo . . . . . . . . .  . hamburger ."; 
 justify-content: center;
 padding: 20px;
+
 `
 
 export const Logo = styled.div`
 grid-area: logo;
-justify-self: end;
-background: ${props => props.logo || "black"};
-color: white;
+justify-self: start;
+color: black;
 padding: 10px;
 align-self: center;
 cursor: pointer;
 `
 
+
 export const ThemeToggler = styled.div`
-grid-area: themeToggler;
-justify-self: end;
+
 display: flex;
 align-items: center;
 padding: 10px;
@@ -40,14 +40,14 @@ border-radius: 50%;
 
 & > * {
     width: 25px;
-    transition: 300ms all ease-in-out;
+    transition: 150ms all ease-in-out;
 
     &:hover {
-        transform: rotate(180deg);
+        transform: scale(1.2);
     }
 }
 `
-export const Hamburger = styled.div`
+export const Hamburger = styled.div`    
     grid-area: hamburger;
     align-self: center;
     justify-self: start;
@@ -57,7 +57,7 @@ export const Hamburger = styled.div`
     div {
         width: 30px;
         height: 2px;
-        background-color: black;
+        background-color: var(--textInverse);
         margin: 5px 0;
         cursor: pointer;
         transition: all 0.125s ease-in-out;
@@ -86,17 +86,19 @@ export const Hamburger = styled.div`
 
 
 export const Stick = styled.div`
-background: ${props => props.background || "black"};
-`
 
+
+`
+// darkgreen #283d3b
+// green #197278
 export const NavToggle = styled.div `
-background: #307378;
+background: #19727899;
 position: fixed;
 height: 100vh;
-right: 0;
 width: 35vw;
-transform: translateX(500px);
+transform: translateX(1000px);
 z-index: -1;
+right: 0;
 top: 0;
 padding: 20px;
 display: grid;
@@ -184,6 +186,10 @@ justify-content: space-between;
         bottom: -1px;
         opacity: 0.1;
         transition: 0.25s all ease-in-out;
+    }
+    &:hover::after {
+        height: 27px;
+        opacity: 0.15;
     }
 }
 `

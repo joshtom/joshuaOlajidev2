@@ -64,6 +64,11 @@ import {
       //  stickTl.current.to(stick2.current, .1, { ease: "bounce.out", xPercent: -10 })
        stickTl.current.to(stick3.current, .1, { ease: "elastic.out(1, 0.3)", y: 3,})
        stickTl.current.to(stick1.current, .1, { y: -3, })
+
+    //    Animating the header on page start
+    const headerAnimate = gsap.timeline({ paused: true });
+    headerAnimate.fromTo(header.current, .4, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
+    headerAnimate.play();
   }, []);
 
 
@@ -104,7 +109,7 @@ import {
           <Nav>
               <Logo 
               onClick={(e) => {e.preventDefault(); scrollTo('#banner')}} 
-              style={logo}> <span style={{color: 'var(--textInverse)'}}> JOSHUA. </span> </Logo>
+              style={logo}> <span style={{color: 'var(--textInverse)'}}> joshua. </span> </Logo>
               <ThemeToggler>
                   <div onClick={themeToggle}>
                     {theme === "dark" ? "☀" : "☾"}

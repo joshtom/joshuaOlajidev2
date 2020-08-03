@@ -1,0 +1,207 @@
+.banner {
+   position: relative;
+   background: transparent;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+   min-height: 100vh;
+   z-index: -100;
+}
+
+
+ .banner > .scroll {
+    position: absolute;
+    font-size: 15px;
+    bottom: 20px;
+    width: 20px;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    align-items: center;
+    background: #197278;
+    border-radius: 20px;
+}
+
+.banner > .scroll .scroller { 
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+    margin: auto;
+    animation: bounce 800ms cubic-bezier(0.7, 0, 0.3, 1) infinite alternate;
+}
+
+
+ .banner > .scroll > * { 
+    transform: rotate(90deg);
+    width: 15px;
+    margin-bottom: 8px;
+    margin-left: 2px;
+    
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+
+.banner > div {
+    flex: 1 1;
+}
+.banner div.bannerText {
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    color: black;
+    flex-basis: 65%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* background: red; */
+    /* min-height: 500px; */
+}
+
+.banner div.bannerText > div { /* Used to create space vertically between the elements */
+    flex-shrink: 1;
+    max-width: 500px;
+}
+
+.banner div.bannerText  p { 
+    color: #4c4c55;
+    margin-bottom: 0;
+    opacity: 0;
+}
+.banner div.bannerText h1.avatarName {
+  /* color: #222228; */
+  color: var(--textTitle);
+  margin-bottom: 0;
+  opacity: 0;
+}
+.banner div.bannerText h1.jobTitle {
+    font-size: 4rem;
+    line-height: 4rem;
+    color: #197278;
+    opacity: 0;
+}
+
+.banner div.bannerText .bannerTextSection {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-right: 10px;
+}
+.banner div.bannerText .bannerTextSection p{
+    margin: 10px;
+    opacity: 0;
+}
+
+
+@media screen and (max-width: 636px) {
+    .banner div.bannerText {
+        min-height: 100vh;
+        position: relative;
+    }
+    .banner > .scroll {
+        display: none;
+    }
+    .banner div.bannerText > div {
+        padding-top: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    /* Scroller to the bottom of the page on tablet view */
+
+    .banner .bannerText > .bannerScroll {
+        position: absolute;
+        font-size: 15px;
+        bottom: 20px;
+        width: 20px;
+        height: 40px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        align-items: center;
+        background: #197278;
+        border-radius: 20px;
+    }
+    
+    .banner > .bannerText .bannerScroll .bannerScroller { 
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: black;
+        margin: auto;
+        animation: bounce 800ms cubic-bezier(0.7, 0, 0.3, 1) infinite alternate;
+    }
+    
+    
+     .banner > .bannerText .bannerScroll > * { 
+        transform: rotate(90deg);
+        width: 15px;
+        margin-bottom: 8px;
+        margin-left: 2px;
+        
+    }
+    
+    @keyframes bounce {
+        0% {
+            transform: translateY(10px);
+        }
+    
+        100% {
+            transform: translateY(0px);
+        }
+    
+    }
+
+    /* End of scroller */
+ 
+}
+
+
+
+
+@media screen and (max-width: 394px) {
+    .banner div.bannerText h1.jobTitle {
+        font-size: 3.3rem;
+        line-height: 3.3rem;
+        margin-top: 10px !important;
+    }
+}
+
+
+.banner .experience {
+    background: transparent;
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 824px) {
+    .banner .experience {
+        display: none;
+    }
+}
+
+
+
+

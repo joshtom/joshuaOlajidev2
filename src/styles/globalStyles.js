@@ -16,7 +16,7 @@ body {
     --link: #542c85;
   }
   &.light {
-    --bg: #fff;
+    --bg: #F8F8F8;
     --textNormal: rgba(0, 0, 0, 0.7);
     --textInverse: #000;
     --textTitle: #303030;
@@ -28,6 +28,7 @@ body {
   h3,
   h4 {
     color: var(--textTitle);
+    margin-top: 0px;
   }
   input,
   textarea,

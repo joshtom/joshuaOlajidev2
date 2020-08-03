@@ -9,6 +9,7 @@ import GlobalStyle from "../styles/globalStyles"
 import { theme as styledTheme } from "../styles/theme"
 
 import Header from "./header"
+import Footer from "./footer"
 import { Container } from "./container"
 
 const Layout = ({ children }) => {
@@ -27,13 +28,9 @@ const Layout = ({ children }) => {
       <GlobalStyle />
       <Header />
       <Container>
-        {/* <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer> */}
+        <main>{children}</main>
       </Container>
+      <Footer />
     </ThemeProvider>
   )
 }

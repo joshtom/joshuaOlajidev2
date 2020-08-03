@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-import { Container } from "../container"
-
 // Setting styles for component
 export const HeaderWrapper = styled.header`
 height: auto;
@@ -9,12 +7,13 @@ position: fixed;
 top: 0;
 z-index: 1;
 width: 100%; 
+opacity: 0;
 `
 export const Nav = styled.div`
 display: grid;
 grid-template-columns: repeat(14, 1fr);
 grid-template-areas: 
-    ". logo . . . . . . . . .  . hamburger ."; 
+    "logo . . . . . . . . .  . . . hamburger"; 
 justify-content: center;
 padding: 20px;
 
@@ -50,7 +49,7 @@ border-radius: 50%;
 export const Hamburger = styled.div`    
     grid-area: hamburger;
     align-self: center;
-    justify-self: start;
+    justify-self: end;
     transition: 300ms all ease-in-out;
     cursor: pointer;
     padding: 10px;

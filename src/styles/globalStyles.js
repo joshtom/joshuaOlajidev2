@@ -13,6 +13,7 @@ body {
     --textInverse: #fff;
     --textTitle: #dbdbdc;
     --textTitleInverse: #000;
+    --textCreamy: #f8f8f9;
     --link: #542c85;
   }
   &.light {
@@ -21,6 +22,7 @@ body {
     --textInverse: #000;
     --textTitle: #303030;
     --textTitleInverse: #dbdbdc;
+    --textCreamy: #131217;
     --link: #542c85;
   }
   h1,

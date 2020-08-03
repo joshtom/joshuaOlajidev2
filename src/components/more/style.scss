@@ -1,0 +1,44 @@
+$creamy: #FEF5F0;
+$dark: #4c4c55;
+$brown: #772e25;
+
+.more {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    background-color: transparent;
+    padding: 30px;
+    * {
+        flex: 1 1 250px;
+        margin: 10px;
+    }
+    div {
+        // background: tomato;
+        h1 {
+            color: #197278;
+            font-size: 8rem;
+
+            @media screen and (max-width: 500px){
+                font-size: 2rem;
+            }
+        }
+        p {
+            color: $dark;
+            width: 500px;
+
+            @media screen and (max-width: 500px){
+                width: 100%;
+            }
+        }
+    }
+    .abstract-image {
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        // z-index: -2;
+    }
+}

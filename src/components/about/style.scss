@@ -1,0 +1,119 @@
+$green: #197278;
+$darkgreen: #283d3b;
+$creamy: #edddd4;
+$creamywhite: #f8f8f9;
+$dark: #36363e;
+.About {
+    min-height: 100vh;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: -5;
+    padding: 30px;
+    overflow-x: hidden;
+    
+    .section__title {
+            display: flex;
+            
+           
+    }
+    div {
+        flex: 1 1 500px;
+        margin: 10px;
+        // background: rosybrown;
+
+        &:nth-child(1) {
+            
+            h1 {
+                font-size: 3rem;
+                width: 20rem;
+                color: var(--textCreamy);
+
+                @media screen and (max-width: 500px){
+                    font-size: 2rem;
+                }
+            }
+            p {
+                color: var(--textTitle);
+            }
+        }
+    }
+    div:nth-child(2) {
+        flex-basis: auto;
+
+        .about__image {
+            position: relative;
+            background-color: #197278;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            
+
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                border: 2px solid #197278;
+                height: 100%;
+                width: 100%;
+                left: 1.5rem;
+                top: 1.5rem;
+                z-index: -1;
+            }
+
+            &:hover {
+
+            }
+        }
+
+        
+    }
+
+    @media screen and (max-width: 548px){
+        div {
+            &:nth-child(1) {
+                padding: 0px;  
+                
+                h1 {
+                    font-size: 3rem;
+                    width: 15rem;
+    
+                    @media screen and (max-width: 500px){
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media screen and (max-width: 465px){
+        div {
+            &:nth-child(2) {
+                .about__image {
+                    width: 250px;
+                    height: 250px;
+                }     
+            }
+        }
+        
+    }
+    @media screen and (max-width: 361px){
+        div {
+            &:nth-child(2) {
+                margin-bottom: 20px;
+                .about__image {
+                    width: 90%;
+                    height: 250px;
+                    margin: 0;
+                }     
+            }
+        }
+        
+    }
+
+}
+

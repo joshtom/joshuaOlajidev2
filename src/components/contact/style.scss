@@ -1,0 +1,126 @@
+$dark: #222228;
+$light: #edddd4;
+.contact {
+    min-height: 80vh;
+    padding: 50px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width:500px){
+        padding: 30px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        color: var(--textTitle);
+
+        @media screen and (max-width: 500px){
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        color: var(textNormal);
+    }
+
+    & > * {
+        flex: 1 1 500px;
+    }
+
+
+   
+    .container {
+        display: flex;
+        flex-flow: row wrap;
+        min-height: 500px;
+        // background: white;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            width: 90%;
+
+            label {
+                color: var(--textTitle);
+                
+            }
+        input, textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid var(--textTitle);
+            margin-bottom: 20px;
+            margin-top: 20px;
+            background: transparent;
+            outline: none;
+            position: relative;
+            color: var(--textNormal);
+
+            &::placeholder {
+                color: var(--textNormal);
+            }
+        }
+        textarea::placeholder {
+            position: absolute;
+            bottom: 0 !important;
+        }
+        button {
+            background: #197278;
+            display: block;
+            color: $light;
+            font-weight: bold;
+            border: none;
+            
+        }
+    }
+        
+        }
+
+        button {
+            width: 10rem;
+            text-transform: uppercase;
+            border: 1px solid red;
+            cursor: pointer;
+            padding: 10px;
+            font-size: .7rem;
+            background: transparent;
+            position: relative;
+            transition: all 0.25s ease-in-out;
+            overflow: hidden;
+            display: none;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                transform: translateX(-200px);
+                height: 100%;
+                background: red;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: all 0.25s ease-in-out;
+
+            }
+
+            &:hover, &:focus-within {
+                color: white;
+                &::before {
+                    transform: translateX(0px);
+                }
+            }
+            
+        }
+
+        @media screen and (max-width: 500px) {
+            .card:nth-child(4), .card:nth-child(5), .card:nth-child(6) {
+                display: none;
+            }
+            button {
+                display: block;
+            }
+        }
+        
+}

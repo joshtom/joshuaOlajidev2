@@ -16,7 +16,6 @@
     bottom: 20px;
     width: 20px;
     height: 40px;
-    color: white;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -24,6 +23,7 @@
     align-items: center;
     background: #197278;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .banner > .scroll .scroller { 
@@ -138,6 +138,7 @@
         align-items: center;
         background: #197278;
         border-radius: 20px;
+        cursor: pointer;
     }
     
     .banner > .bannerText .bannerScroll .bannerScroller { 

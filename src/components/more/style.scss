@@ -5,9 +5,8 @@ $brown: #772e25;
 .more {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     min-height: 100vh;
-    align-items: center;
     overflow: hidden;
     justify-content: center;
     background-color: transparent;
@@ -27,8 +26,9 @@ $brown: #772e25;
             }
         }
         p {
-            color: $dark;
+            color: var(--shadyText);
             width: 500px;
+            font-weight: lighter;
 
             @media screen and (max-width: 500px){
                 width: 100%;

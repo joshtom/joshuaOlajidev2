@@ -43,6 +43,7 @@ import {
   //     }, []); // Empty array ensures effect is only run on mount and unmount
   //   }
 
+
   useEffect(() => {
       tl.current = gsap.timeline({paused: true});
       stickTl.current = gsap.timeline({paused: true});

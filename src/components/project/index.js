@@ -26,91 +26,27 @@ const Project = ({ data }) =>{
     return(
         <div className="projects" id="project">
             
-            <h1> Projects. </h1>            
-            <p> Some selected projects I have worked on. </p>
+            <h1 className="project-title"> Projects. </h1>            
+            <p className="project-subtitle"> I design and Build web Applications. </p>
         <div className="container">
            <div className="card">
-                <header>
-                    <ImageSetup />
-                </header> 
-                <footer>
-                    <h4><a href="/joshuaolajide.netlify.app">joshuaolajide</a></h4> <span className="check">|</span> 
-                    <a href="/" className="links check">gh.</a>
-                    <a href="/" className="links check">live.</a> 
-                    <p>portfolio.
-                    
-                    </p>
-                </footer>
+                <h1> Joshua <br /> Olajide.</h1>
+                <p> portfolio </p>
            </div>
            <div className="card">
-           <header>
-                    {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-                    <ImageSetup />
-                </header> 
-                <footer>
-                    <h4><a href="/joshuaolajide.netlify.app">hackernews clone</a></h4> <span className="check">|</span> 
-                    <a href="/" className="links check">gh.</a>
-                    <a href="/" className="links check">live.</a> 
-                    <p>blog.
-                    
-                    </p>
-                </footer>
+           
            </div>
            <div className="card">
-           <header>
-                    {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-                    <ImageSetup />
-                </header> 
-                <footer>
-                    <h4><a href="/joshuaolajide.netlify.app">Feeling pressed</a></h4> <span className="check">|</span> 
-                    <a href="/" className="links check">gh.</a>
-                    <a href="/" className="links check">live.</a> 
-                    <p>blog.
-                    
-                    </p>
-                </footer>
+           
            </div>
            <div className="card" ref={card}>
-           <header>
-                    {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-                    <ImageSetup />
-                </header> 
-                <footer>
-                    <h4><a href="/joshuaolajide.netlify.app">health Journal</a></h4> <span className="check">|</span> 
-                    <a href="/" className="links check">gh.</a>
-                    <a href="/" className="links check">live.</a> 
-                    <p>Healthcare.
-                    
-                    </p>
-                </footer>
+           
            </div>
            <div className="card" ref={cards}>
-           <header>
-                    {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-                    <ImageSetup />
-                </header> 
-                <footer>
-                    <h4><a href="/joshuaolajide.netlify.app">DevAlert</a></h4> <span className="check">|</span> 
-                    <a href="/" className="links check">gh.</a>
-                    <a href="/" className="links check">live.</a> 
-                    <p>Job center.
-                    
-                    </p>
-                </footer>
+          
            </div>
            <div className="card" ref={cardss}>
-           <header>
-                    {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
-                    <ImageSetup />
-                </header> 
-                <footer>
-                    <h4><a href="/joshuaolajide.netlify.app">Connect Four</a></h4> <span className="check">|</span> 
-                    <a href="/" className="links check">gh.</a>
-                    <a href="/" className="links check">live.</a> 
-                    <p>Game.
-                    
-                    </p>
-                </footer>
+          
            </div>
         </div>
         <center>

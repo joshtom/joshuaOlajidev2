@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 import styles from "./styles.module.css";
 
 
@@ -21,6 +22,13 @@ export default function Banner() {
         tl.play();
     },[])
 
+    const scroller = e => {
+        e.preventDefault();
+        alert('This is working now');
+    }
+
+
+
     return(
         <div className={styles.banner} id="banner">
             
@@ -36,7 +44,7 @@ export default function Banner() {
                     <p ref={greet}>Hello, I am</p>
 
                 <h1 className={styles.avatarName} ref={name}>
-                    Joshua Olajide -
+                    Joshua Olajide *
                 </h1>
 
                 <h1 className={styles.jobTitle} ref={title}>
@@ -44,7 +52,7 @@ export default function Banner() {
                 </h1>
 
                 <section className={styles.bannerTextSection}>
-                    <p ref={left}>
+                    <p ref={left} className={styles.bannerTextSection__intro}>
                         I love to create Scalable, Fast and mobile-first web Applications.
                     </p>
                     <p ref={right}>
@@ -55,7 +63,7 @@ export default function Banner() {
 
                 <section className={styles.bannerScroll}>
                <section className={styles.bannerScroller}>
-                   <section></section>
+                   <section> </section>
                 </section> 
             </section>
             </div>

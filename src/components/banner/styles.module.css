@@ -78,10 +78,11 @@
 }
 
 .banner div.bannerText  p { 
-    color: #4c4c55;
+    color: var(--shadyText);
     margin-bottom: 0;
     opacity: 0;
 }
+
 .banner div.bannerText h1.avatarName {
   /* color: #222228; */
   color: var(--textTitle);
@@ -136,7 +137,7 @@
         align-items: center;
         justify-self: center;
         align-items: center;
-        background: #197278;
+        background: yellow;
         border-radius: 20px;
         cursor: pointer;
     }

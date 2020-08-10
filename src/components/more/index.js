@@ -6,7 +6,7 @@ export default function More() {
    
 
     return(
-        <div className="more" >
+        <div className="more" id="more">
         <div>
             <h1>iDesign.</h1>
             <p>

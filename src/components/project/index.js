@@ -1,4 +1,3 @@
-// A total redesign of This project sections is needed
 import React, { useEffect, useRef, useState } from "react";
 import { Url } from '../url'
 import { Github } from '../github'
@@ -10,20 +9,6 @@ const Project = ({ data }) =>{
     const cards = useRef(null);
     const cardss = useRef(null);
 
-    const handleCard = () => {
-        setIsToggle(!isToggle);
-        if (isToggle) {
-                card.current.style.display = 'block'
-                cards.current.style.display = 'block'
-                cardss.current.style.display = 'block'
-                    }
-                
-                else {
-                    card.current.style.display = 'none'
-                cards.current.style.display = 'none'
-                cardss.current.style.display = 'none'
-                }
-    }
     return(
         <div className="projects" id="project">
             
@@ -78,29 +63,9 @@ const Project = ({ data }) =>{
                     <Url className="url"/>
                 </div>  
            </div>
-        </div>
-        <center>
-
-            <button
-            onClick={handleCard}
-            className="toggle"
-            > 
-                { isToggle ? 'VIEW MORE' : 'VIEW LESS'} 
-            </button> 
-        </center>
+        </div>        
         </div>
     )
 }
 
 export default Project
-
-// export const query = graphql`
-//   query {
-//     file(relativePath: { eq: "setup.jpg" }) {
-//       childImageSharp {
-//         fluid(maxWidth: 300, maxHeight: 300) {
-//             ...GatsbyImageSharpFluid_noBase64
-//         }
-//       }
-//     }
-//   }`

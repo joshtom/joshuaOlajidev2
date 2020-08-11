@@ -84,8 +84,18 @@ $dark: #222228;
             &:nth-child(6) {
                 background: #772E25;
             }
+            }
 
-
+            .image-links {
+                display: flex;
+                position: absolute;
+                bottom: 20px;
+                * {
+                    width: 30px;
+                    &:nth-child(2) {
+                        left: 20px;
+                    }
+                }
             }
         
         }

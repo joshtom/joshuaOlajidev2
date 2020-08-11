@@ -1,6 +1,7 @@
 // A total redesign of This project sections is needed
 import React, { useEffect, useRef, useState } from "react";
-import { ImageSetup } from '../image'
+import { Url } from '../url'
+import { Github } from '../github'
 import "./style.scss";
 
 const Project = ({ data }) =>{
@@ -32,6 +33,10 @@ const Project = ({ data }) =>{
            <div className="card">
                 <h1> Joshua <br /> Olajide.</h1>
                 <p> portfolio </p>
+                <div className="image-links">
+                    <Github />
+                    <Url className="url"/>
+                </div>
            </div>
            <div className="card">
            

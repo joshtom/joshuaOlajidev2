@@ -8,6 +8,9 @@ export const FooterWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     padding: 50px 200px;
+    position: relative;
+    bottom: 0;
+    z-index: -1000;
     
 
     p {

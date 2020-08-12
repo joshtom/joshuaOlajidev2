@@ -12,6 +12,8 @@ import {
     RightOutro
  } from './styles.js'
 
+ const getYear = new Date().getFullYear();
+ 
 export default function Footer() {
     return(
         // Complete this section with the contact route with https://cuberto.com/services/
@@ -36,7 +38,7 @@ export default function Footer() {
                 </div>
             </FirstIntro>
             <LeftOutro>
-                <p>&copy; 2020 joshuaolajide</p>
+                <p>&copy; {getYear} joshuaolajide</p>
             </LeftOutro>
             <RightOutro>
                 <Link> Github. </Link>

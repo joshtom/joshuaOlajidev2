@@ -13,15 +13,15 @@ import {
  } from './styles.js'
 
  const getYear = new Date().getFullYear();
- 
+
 export default function Footer() {
     return(
         // Complete this section with the contact route with https://cuberto.com/services/
-        <FooterWrapper id="contact">
+        <FooterWrapper>
            <IntroFooter>
-                <Container>
+                <Container id="contact">
                 <ContainerHeader>Have an idea?</ContainerHeader>
-                <Linked><Link>Tell me about it!</Link> <hr /></Linked>
+                <Linked><Link to="/">Tell me about it!</Link></Linked>
                 </Container>
            </IntroFooter>
 
@@ -41,10 +41,10 @@ export default function Footer() {
                 <p>&copy; {getYear} joshuaolajide</p>
             </LeftOutro>
             <RightOutro>
-                <Link> Github. </Link>
-                <Link> Twitter. </Link>
-                <Link> Linkedin. </Link>
-                <Link> Medium. </Link>
+                <a href="https://github.com/joshtom/" target="_blank"> Github. </a>
+                <a href="https://twitter.com/olatojosh" target="_blank"> Twitter. </a>
+                <a href="https://www.linkedin.com/in/joshua-olajide-582457177/" target="_blank"> Linkedin. </a>
+                <a href="https://medium.com/@olajidejoshua4real" target="_blank"> Medium. </a>
             </RightOutro>
            </OutroFooter>
         </FooterWrapper>

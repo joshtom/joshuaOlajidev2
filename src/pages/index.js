@@ -9,8 +9,12 @@ import Project from "../components/project"
 // import Contact from "../components/contact"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
+
+
+
+const IndexPage = () => {
+  return (
+    <Layout>
     <SEO title="Home" />
     <Banner />
     <More />
@@ -18,6 +22,7 @@ const IndexPage = () => (
     <Project />
     {/* <Contact /> */}
   </Layout>
-)
+  )
+}
 
 export default IndexPage

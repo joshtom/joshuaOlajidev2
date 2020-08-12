@@ -1,20 +1,18 @@
 import styled from "styled-components"
 
 export const FooterWrapper = styled.div`
-    background: black;
+    background: var(--bg);
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 50px 200px;
-    position: relative;
-    bottom: 0;
-    z-index: -1000;
+   
     
 
     p {
-        color: var(--textTitle);
+        color: var(--textInverse);
         margin: auto;
     }
 `
@@ -33,18 +31,19 @@ export const Container = styled.div `
 `
 export const ContainerHeader = styled.h1 `
     font-size: 4rem;
-    color: white;   
+    color: var(--textInverse);   
 `
 export const Linked = styled.div `
     line-height: 1;
     a {
-        color: white;
+        color: var(--textInverse);   
         font-size: 4rem;
         font-weight: lighter;
-        cursor: none;
+        
     }
     hr {
         background: #fff;
+        width: 100%;
     }
 `
 
@@ -67,10 +66,10 @@ export const FirstIntro = styled.div `
     div:nth-child(3) {
     }
     h1 {
-        color: white;
+        color: var(--textInverse);   
     }
     p {
-        color: #dbdbdc;
+        color: var(--textInverse);   
         font-size: 1.5rem;
     }
 `
@@ -78,20 +77,24 @@ export const LeftOutro = styled.div `
     margin-top: auto;
 
     p {
-        color: #ffffff9e;
+        color: var(--textInverse);   
     }
 
 `
+
+// color: #ffffff9e;
 export const RightOutro = styled.div `
     margin-top: auto;
     display: flex;
     a {
         color: white;
         margin-left: 20px;
-        cursor: pointer;
-        color: #ffffff9e;
+        color: var(--textInverse); 
+        cursor: pointer;  
+        text-decoration: underline;
+
         &:hover {
-            color: white;
+            color: var(--textInverse);   
         }
     }
 

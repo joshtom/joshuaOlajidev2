@@ -28,6 +28,7 @@ $dark: #222228;
     p {
         color: var(textNormal);
         align-self: center;
+        text-align: center;
     }
     .container {
         display: flex;
@@ -63,7 +64,7 @@ $dark: #222228;
              }
             
              @media screen and (max-width:500px){
-                 margin: 20px 0px;
+                min-height: 300px;
              }
 
              &:nth-child(1) {

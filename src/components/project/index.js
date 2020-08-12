@@ -13,7 +13,7 @@ const Project = ({ data }) =>{
         <div className="projects" id="project">
             
             <h1 className="project-title"> Projects. </h1>            
-            <p className="project-subtitle"> I design and Build web Applications. </p>
+            <p className="project-subtitle"> I <b>design</b> and <b>Build</b> web Applications. </p>
         <div className="container">
            <div className="card">
                 <h1> Joshua <br /> Olajide.</h1>

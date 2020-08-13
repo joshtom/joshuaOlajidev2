@@ -9,6 +9,10 @@ export const FooterWrapper = styled.div`
     justify-content: space-between;
     padding: 50px 200px;
    
+
+    @media screen and (max-width: 982px) {
+        padding: 50px;
+    }
     
 
     p {
@@ -24,6 +28,9 @@ export const IntroFooter = styled.div `
     flex-direction: column;
     justify-content: center;
 
+    
+    
+
 `
 export const Container = styled.div `
     margin-top: auto;
@@ -31,7 +38,11 @@ export const Container = styled.div `
 `
 export const ContainerHeader = styled.h1 `
     font-size: 4rem;
-    color: var(--textInverse);   
+    color: var(--textHeaderColor);  
+
+    @media screen and (max-width: 982px) {
+        font-size: 3rem;
+    }
 `
 export const Linked = styled.div `
     line-height: 1;
@@ -39,12 +50,17 @@ export const Linked = styled.div `
         color: var(--textInverse);   
         font-size: 4rem;
         font-weight: lighter;
+
+        @media screen and (max-width: 982px) {
+            font-size: 3rem;
+        }
         
     }
     hr {
         background: #fff;
         width: 100%;
     }
+
 `
 
 export const OutroFooter = styled.div `
@@ -55,35 +71,62 @@ export const OutroFooter = styled.div `
     flex-flow: row wrap;
     justify-content: space-between;
     
+    @media screen and (max-width: 982px) {
+        flex-direction: row-reverse;
+    }
+    
+    
 `
 export const FirstIntro = styled.div `
     height: auto;
     width: 100%;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    
+    div:nth-child(1) {
+        @media screen and (max-width: 982px) {
+            margin-top: 10px;
+        }
+    }
 
     div:nth-child(3) {
+        @media screen and (max-width: 982px) {
+            flex-basis: 100%;
+        }
     }
     h1 {
-        color: var(--textInverse);   
+        color: var(--textInverse); 
+        @media screen and (max-width: 982px) {
+            font-size: 1.5rem;
+        }  
     }
     p {
         color: var(--textInverse);   
         font-size: 1.5rem;
+
+        @media screen and (max-width: 982px) {
+            font-size: 1.2rem;
+        }
+        
     }
+    
 `
-export const LeftOutro = styled.div `
+export const RightOutro = styled.div `
     margin-top: auto;
 
     p {
         color: var(--textInverse);   
     }
+    @media screen and (max-width: 982px) {
+        flex-basis: 100%;
+    }
 
 `
 
 // color: #ffffff9e;
-export const RightOutro = styled.div `
+export const LeftOutro = styled.div `
     margin-top: auto;
     display: flex;
     a {
@@ -96,6 +139,18 @@ export const RightOutro = styled.div `
         &:hover {
             color: var(--textInverse);   
         }
+
+        &:nth-child(1) {
+            @media screen and (max-width: 982px) {
+                
+            }
+        }
+    }
+
+    @media screen and (max-width: 982px) {
+        flex-basis: 100%;
+        background: red;
+        margin-left: 0px !important;
     }
 
 `

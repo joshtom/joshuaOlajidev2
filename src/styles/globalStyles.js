@@ -15,6 +15,8 @@ body {
     --textTitleInverse: #000;
     --textCreamy: #f8f8f9;
     --shadyText: #ffffff9e;
+    --textHeaderColor: #fff;
+    --textHeaderBg: brown;
     --link: #542c85;
   }
   &.light {
@@ -25,6 +27,8 @@ body {
     --textTitleInverse: #dbdbdc;
     --textCreamy: #131217;
     --shadyText: #4c4c55;
+    --textHeaderColor: brown;
+    --textHeaderBg: #fff:
     --link: #542c85;
   }
   h1,

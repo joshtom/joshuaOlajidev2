@@ -38,13 +38,13 @@ export default function Footer() {
                 </div>
             </FirstIntro>
             <LeftOutro>
-                <p>&copy; {getYear} joshuaolajide</p>
-            </LeftOutro>
-            <RightOutro>
                 <a href="https://github.com/joshtom/" target="_blank"> Github. </a>
                 <a href="https://twitter.com/olatojosh" target="_blank"> Twitter. </a>
                 <a href="https://www.linkedin.com/in/joshua-olajide-582457177/" target="_blank"> Linkedin. </a>
                 <a href="https://medium.com/@olajidejoshua4real" target="_blank"> Medium. </a>
+            </LeftOutro>
+            <RightOutro>
+            <p>&copy; {getYear} joshuaolajide</p>
             </RightOutro>
            </OutroFooter>
         </FooterWrapper>

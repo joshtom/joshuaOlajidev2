@@ -41,22 +41,22 @@ export default function Banner() {
             <div className={styles.bannerText}>
 
                 <div>
-                    <p ref={greet}>Hello, I am</p>
+                    <p ref={greet}>Hello, 👋🏼 I am</p>
 
                 <h1 className={styles.avatarName} ref={name}>
-                    Joshua Olajide *
+                    Joshua Olajide ✔
                 </h1>
 
                 <h1 className={styles.jobTitle} ref={title}>
-                    Frontend Developer.
+                    Frontend Developer. 
                 </h1>
 
                 <section className={styles.bannerTextSection}>
                     <p ref={left} className={styles.bannerTextSection__intro}>
-                        I love to create Scalable, Fast and mobile-first web Applications.
+                        I <span className={styles.bannerTextSection__heart}>❤</span> to create Scalable, Fast and mobile-first web Applications.
                     </p>
                     <p ref={right}>
-                        Put on a smile and Get ready to turn your Imaginations into reality
+                        Put on a 😊 and Get ready to turn your Imaginations into reality.
                     </p>
                 </section>
                 </div>

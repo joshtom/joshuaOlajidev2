@@ -108,6 +108,10 @@
     opacity: 0;
 }
 
+.banner div.bannerText .bannerTextSection .bannerTextSection__intro .bannerTextSection__heart{
+    color: red;
+}
+
 
 @media screen and (max-width: 636px) {
     .banner div.bannerText {

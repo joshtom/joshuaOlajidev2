@@ -57,14 +57,16 @@ import {
           .fromTo(socialLink.current,  .4,{ y: 10, opacity: 0 }, { y: 0, opacity: 1 })
           .play(); //Animating the sidebar
 
-        // Animating the sticks  
-      //  stickTl.current.to(stick3.current, .1, { xPercent:  -10, opacity: 0 })
-      //  .to(stick2.current, .1, { rotate: -45,})
-      // .to(stick1.current, .1, { y: 6, rotate: 45,})
-      stickTl.current.to(stick2.current, { duration: .1, ease: "elastic.out(1, 0.3)", x: -10, });
-      //  stickTl.current.to(stick2.current, .1, { ease: "bounce.out", xPercent: -10 })
-       stickTl.current.to(stick3.current, .1, { ease: "elastic.out(1, 0.3)", y: 3,})
-       stickTl.current.to(stick1.current, .1, { y: -3, })
+        // Old stick animate
+       stickTl.current.to(stick3.current, .1, { xPercent:  -10, opacity: 0 })
+       .to(stick2.current, .1, { rotate: -45,})
+      .to(stick1.current, .1, { y: 6, rotate: 45,})
+
+    //   New Stick animate
+    //   stickTl.current.to(stick2.current, { duration: .1, ease: "elastic.out(1, 0.3)", x: -10, });
+    //   //  stickTl.current.to(stick2.current, .1, { ease: "bounce.out", xPercent: -10 })
+    //    stickTl.current.to(stick3.current, .1, { ease: "elastic.out(1, 0.3)", y: 3,})
+    //    stickTl.current.to(stick1.current, .1, { y: -3, })
 
     //    Animating the header on page start
     const headerAnimate = gsap.timeline({ paused: true });

@@ -43,7 +43,7 @@ $dark: #222228;
              margin-bottom: 40px;
              min-height: 400px;
              padding: 40px;
-             transition: all 0.25s ease-in-out;
+             transition: all 0.50s ease-in-out;
              position: relative;
              cursor: pointer;
              
@@ -58,9 +58,10 @@ $dark: #222228;
                  
              }
              &:hover {
-            //      transform: translateY(-10px);
-            //      box-shadow:  11px 11px 22px #eee, 
-            //  -11px -11px 22px #eee;
+                 transform: translateY(-10px);
+            background: linear-gradient(145deg, black, black) !important;
+            box-shadow: inset 20px 20px 70px rgba(0,0,0,.1), 
+            inset -20px -20px 70px rgba(0,0,0,.1);
              }
             
              @media screen and (max-width:500px){

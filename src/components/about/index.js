@@ -6,6 +6,8 @@ import "./style.scss";
 export default function About() {
         const aboutContainer = useRef(null);
         const image = useRef(null);
+        const about = useRef(null);
+
      useEffect(() => {
         if (typeof window !== `undefined`) {
             gsap.registerPlugin(ScrollTrigger)
@@ -20,11 +22,12 @@ export default function About() {
                 }
               });
 
-              tl.fromTo(image.current, .4, { x: 100 }, { x: 0})
+              tl.fromTo(about.current, .1, { x: -200 }, { x: 0 })
+              .fromTo(image.current, .1, { x: 200 }, { x: 0})
     }, [])
     return(
         <div className="About" ref={aboutContainer} id="about">
-            <div>
+            <div ref={about}>
                 <h1>Over the past few years,</h1>  
                 <p>
                 I've built products that solve real-life problems ranging from Businesses to companies with focus on creating fast, and accessible user experiences using advanced web technologies. Not only these makes me standout, but paying attention to every detail from any DESIGN which makes me deliver clean, elegant and pixel-perfect solutions.

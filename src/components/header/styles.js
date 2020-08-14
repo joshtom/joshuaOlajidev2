@@ -121,7 +121,7 @@ grid-template-areas:
             }
             & > a {
                 cursor: pointer;
-                color: black;
+                color: #F8F8F8;
                 text-decoration: none;
                 font-size: 3.5rem;
                 position: relative;
@@ -164,6 +164,10 @@ margin-bottom: 10px;
     font-weight: 100;
     font-size: 1rem;
 }
+& > p {
+    color: #F8F8F8;
+    letter-spacing: .10rem;
+}
 `
 
 export const Social = styled.div`
@@ -172,7 +176,7 @@ justify-content: space-between;
 
 & > a {
     text-decoration: none;
-    color: #000;
+    color: #F8F8F8;
     position: relative;
 
     &:after {

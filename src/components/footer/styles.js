@@ -64,12 +64,13 @@ export const Linked = styled.div `
 `
 
 export const OutroFooter = styled.div `
-    width: 100%;
+    min-width: 100%;
     height: 300px;
     justify-self: flex-end;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    position: relative;
     
     @media screen and (max-width: 982px) {
         flex-direction: row-reverse;
@@ -129,6 +130,7 @@ export const RightOutro = styled.div `
 export const LeftOutro = styled.div `
     margin-top: auto;
     display: flex;
+    flex-flow: row wrap;
     a {
         color: white;
         margin-left: 20px;
@@ -140,17 +142,15 @@ export const LeftOutro = styled.div `
             color: var(--textInverse);   
         }
 
-        &:nth-child(1) {
             @media screen and (max-width: 982px) {
-                
+                width: 40%;
+                line-height: 2rem;
+                margin: 0;
             }
-        }
     }
 
     @media screen and (max-width: 982px) {
         flex-basis: 100%;
-        background: red;
-        margin-left: 0px !important;
     }
 
 `

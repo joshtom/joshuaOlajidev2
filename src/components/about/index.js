@@ -3,7 +3,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import "./style.scss";
 
-export default function About(props) {
+export default function About() {
         const aboutContainer = useRef(null);
         const image = useRef(null);
      useEffect(() => {

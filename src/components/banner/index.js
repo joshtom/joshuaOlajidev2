@@ -44,7 +44,7 @@ export default function Banner() {
             <div className={styles.bannerText}>
 
                 <div>
-                    <p ref={greet}>Hello, 👋🏼 I am</p>
+                    <p ref={greet}>Hello👋🏼, I'm</p>
 
                 <h1 className={styles.avatarName} ref={name}>
                     Joshua Olajide ✔

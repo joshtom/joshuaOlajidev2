@@ -59,9 +59,9 @@ $dark: #222228;
              }
              &:hover {
                  transform: translateY(-10px);
-            background: linear-gradient(145deg, black, black) !important;
-            box-shadow: inset 20px 20px 70px rgba(0,0,0,.1), 
-            inset -20px -20px 70px rgba(0,0,0,.1);
+            
+            box-shadow: inset 20px 20px 70px rgba(0,0,0,.3), 
+            inset -20px -20px 70px rgba(0,0,0,.3);
              }
             
              @media screen and (max-width:500px){

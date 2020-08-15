@@ -14,16 +14,38 @@ export default function About() {
             gsap.core.globals('ScrollTrigger', ScrollTrigger)
             }
 
-            const tl = gsap.timeline({
-                paused: true,
-                scrollTrigger: {
-                  trigger: aboutContainer.current,
-                  scrub: true,
-                }
-              });
+            ScrollTrigger.matchMedia({
+                "(min-width: 992px)": function scrollOnMobile() {
+                    
+                    const tl = gsap.timeline({
+                        paused: true,
+                        scrollTrigger: {
+                        trigger: aboutContainer.current,
+                        start: "top top",
+                        scrub: true,
+                        }
+                    });
 
-              tl.fromTo(about.current, .1, { x: -200 }, { x: 0 })
-              .fromTo(image.current, .1, { x: 200 }, { x: 0})
+                    tl.to([image.current, about.current], .1, {rotation:45, autoAlpha: 0, translateX: 200})
+                    //   .to(image.current, .1, {rotation:-45, autoAlpha: 0})
+                        },
+
+                        "(max-width: 991px)": function scrollOnMobile() {
+                    
+                            const tl = gsap.timeline({
+                                paused: true,
+                                scrollTrigger: {
+                                trigger: aboutContainer.current,
+                                start: "top top",
+                                scrub: true,
+                                }
+                            });
+        
+                            tl.to( about.current, .1, {rotation:45, autoAlpha: 0, translateX: 200})
+                            .to(image.current, .1, {rotation:45, autoAlpha: 0, translateX: 200})
+                                },
+                
+            })
     }, [])
     return(
         <div className="About" ref={aboutContainer} id="about">

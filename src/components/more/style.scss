@@ -1,3 +1,8 @@
+// smaller than or equal to 768 px (smartphones)
+// larger than 768 px (small devices, tablets)
+// larger than 992 px (medium devices)
+// larger than 1200px (large devices)
+
 $creamy: #FEF5F0;
 $dark: #4c4c55;
 $brown: #772e25;
@@ -21,7 +26,10 @@ $brown: #772e25;
             color: #197278;
             font-size: 8rem;
 
-            @media screen and (max-width: 500px){
+            @media screen and (max-width: 992px) {
+                font-size: 3.5rem;
+            }
+            @media screen and (max-width: 768px){
                 font-size: 2rem;
             }
         }

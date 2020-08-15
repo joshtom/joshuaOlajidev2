@@ -25,6 +25,8 @@ export default function More() {
               tl.fromTo(iDesign.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
               .fromTo(iDevelop.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
               .fromTo(iLearn.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
+
+
     }, [])
 
     return(

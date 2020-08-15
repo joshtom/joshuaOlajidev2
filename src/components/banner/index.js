@@ -13,12 +13,15 @@ export default function Banner() {
     const experience = useRef(null);
 
     useEffect(() => {
+
+        
         const tl = gsap.timeline({ paused: true });
-        tl.fromTo(greet.current, .4, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
-        tl.fromTo(name.current, .4, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
-        tl.fromTo(title.current, .4, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
-        tl.fromTo(left.current, .4, { x: -100, opacity: 0 }, { x: 0, opacity: 1});
-        tl.fromTo(right.current, .4, { x: 100, opacity: 0 }, { x: 0, opacity: 1});
+        tl.fromTo(greet.current, .1, { y: -10, opacity: 0,}, { y: 0, opacity: 1, ease: "bounce.in"});
+        // tl.fromTo(greet.current, {duration: 2,  ease: "bounce.in", scale:0, rotation:0 }, {duration: 2,  ease: "bounce.out", scale:1.5, rotation:30 } );
+        tl.fromTo(name.current, .1, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
+        tl.fromTo(title.current, .1, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
+        tl.fromTo(left.current, .4, { x: -100, opacity: 0 }, { x: 0, opacity: 1, ease: "back.out(1.7)"});
+        tl.fromTo(right.current, .4, { x: 100, opacity: 0 }, { x: 0, opacity: 1, ease: "back.out(1.7)"});
         tl.play();
     },[])
 

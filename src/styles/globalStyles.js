@@ -6,6 +6,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--bg);
+  box-shadow: inset 20px 20px 70px rgba(0,0,0,.1), 
+            inset -20px -20px 70px rgba(0,0,0,.1);
   color: var(--textNormal);
   &.dark {
     --bg: #131217;

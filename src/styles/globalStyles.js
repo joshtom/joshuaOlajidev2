@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
+
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
   box-shadow: inset 20px 20px 70px rgba(0,0,0,.1), 
             inset -20px -20px 70px rgba(0,0,0,.1);
   color: var(--textNormal);
+  height: 100% !important;
   &.dark {
     --bg: #131217;
     --textNormal: #fff;
@@ -59,4 +61,5 @@ body {
     margin: 0;
     user-select: none;
   }
+ 
 }`

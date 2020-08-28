@@ -5,29 +5,28 @@ import { Github } from './github'
 import "./style.scss";
 
 const Project = ({ data }) =>{
-   
+    const card = useRef();
+    const scrollContainer = useRef();
+    let pageYOffset = window.pageYOffset;
+    const render = () => {
+        const newPageOffset = window.pageYOffset
+        const diff = newPageOffset - pageYOffset
+        
+        const tl = gsap.timeline({
+            paused: true
+        })
+        tl.to(scrollContainer.current, .3, {
+            // skewX: -diff * 0.03,
+            skewY: diff * 0.1,
+            ease: "Power4.ease"
+        }).play()
+        
+        pageYOffset = newPageOffset
+      requestAnimationFrame(render)
+    }
+    
 
     useEffect(() => {
-        const card = useRef();
-        const scrollContainer = useRef();
-        let pageYOffset = window.pageYOffset;
-        const render = () => {
-            const newPageOffset = window.pageYOffset
-            const diff = newPageOffset - pageYOffset
-            
-            const tl = gsap.timeline({
-                paused: true
-            })
-            tl.to(scrollContainer.current, .3, {
-                // skewX: -diff * 0.03,
-                skewY: diff * 0.1,
-                ease: "Power4.ease"
-            }).play()
-            
-            pageYOffset = newPageOffset
-          requestAnimationFrame(render)
-        }
-        
         render();
     }, [])
 

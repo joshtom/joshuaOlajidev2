@@ -5,30 +5,30 @@ import { Github } from './github'
 import "./style.scss";
 
 const Project = ({ data }) =>{
-    const card = useRef();
-    const scrollContainer = useRef();
-    let pageYOffset = window.pageYOffset;
-    const render = () => {
-        const newPageOffset = window.pageYOffset
-        const diff = newPageOffset - pageYOffset
+    // const card = useRef();
+    // const scrollContainer = useRef();
+    // let pageYOffset = window.pageYOffset;
+    // const render = () => {
+    //     const newPageOffset = window.pageYOffset
+    //     const diff = newPageOffset - pageYOffset
         
-        const tl = gsap.timeline({
-            paused: true
-        })
-        tl.to(scrollContainer.current, .3, {
-            // skewX: -diff * 0.03,
-            skewY: diff * 0.1,
-            ease: "Power4.ease"
-        }).play()
+    //     const tl = gsap.timeline({
+    //         paused: true
+    //     })
+    //     tl.to(scrollContainer.current, .3, {
+    //         // skewX: -diff * 0.03,
+    //         skewY: diff * 0.1,
+    //         ease: "Power4.ease"
+    //     }).play()
         
-        pageYOffset = newPageOffset
-      requestAnimationFrame(render)
-    }
+    //     pageYOffset = newPageOffset
+    //   requestAnimationFrame(render)
+    // }
     
 
-    useEffect(() => {
-        render();
-    }, [])
+    // useEffect(() => {
+    //     render();
+    // }, [])
 
     /* useEffect(() => {
         // Skew cards on scroll
@@ -65,8 +65,8 @@ const Project = ({ data }) =>{
             
             <h1 className="project-title"> Projects. </h1>            
             <p className="project-subtitle"> I <b>design</b> and <b>Build</b> web Applications. </p>
-        <div className="container" ref={scrollContainer}>
-           <div className="card" ref={card}>
+        <div className="container">
+           <div className="card" >
                 <h1> Joshua <br /> Olajide.</h1>
                 <p> portfolio </p>
                 <div className="image-links">
@@ -74,7 +74,7 @@ const Project = ({ data }) =>{
                     <Url className="url"/>
                 </div>  
            </div>
-           <div className="card" ref={card}>
+           <div className="card" >
                 <h1> Feeling <br /> Pressed.</h1>
                 <p> blog </p>
                 <div className="image-links">
@@ -82,7 +82,7 @@ const Project = ({ data }) =>{
                     <Url className="url"/>
                 </div>  
            </div>
-           <div className="card" ref={card}>
+           <div className="card" >
                 <h1> Serv- <br /> iceMart.</h1>
                 <p> investment </p>
                 <div className="image-links">
@@ -90,7 +90,7 @@ const Project = ({ data }) =>{
                     <Url className="url"/>
                 </div>  
            </div>
-           <div className="card" ref={card}>
+           <div className="card" >
                  <h1> Dev <br /> Alert.</h1>
                 <p> jobs </p>
                 <div className="image-links">
@@ -98,7 +98,7 @@ const Project = ({ data }) =>{
                     <Url className="url"/>
                 </div>  
            </div>
-           <div className="card" ref={card}>
+           <div className="card" >
                   <h1> Covid <br /> Report.</h1>
                 <p> healthcare </p>
                 <div className="image-links">
@@ -106,7 +106,7 @@ const Project = ({ data }) =>{
                     <Url className="url"/>
                 </div>  
            </div>
-           <div className="card" ref={card}>
+           <div className="card" >
                  <h1> Conn- <br /> ect Four.</h1>
                 <p> fun game </p>
                 <div className="image-links">

@@ -146,17 +146,12 @@ export default function Banner() {
       .fromTo(path50.current, { rotationZ:45, opacity: 0 }, { rotationZ:0, opacity: 1 })
   }, [])
 
-  const scroller = () => {
-    alert("This is working now")
-  }
+
 
   return (
     <div className={styles.banner} id="banner">
-      <div className={styles.scroll} onClick={scroller}>
-        <div className={styles.scroller}>
-          <div></div>
-          <span>  </span>
-        </div>
+      <div className={styles.scroll}>
+          <div className={styles.scroller}> </div>
       </div>
 
       <div className={styles.bannerText}>

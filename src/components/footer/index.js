@@ -21,7 +21,7 @@ export default function Footer() {
            <IntroFooter>
                 <Container id="contact">
                 <ContainerHeader>Have an idea?</ContainerHeader>
-                <Linked><Link to="/">Tell me about it!</Link></Linked>
+                <Linked><Link to="#">Tell me about it!</Link></Linked>
                 </Container>
            </IntroFooter>
 
@@ -38,10 +38,10 @@ export default function Footer() {
                 </div>
             </FirstIntro>
             <LeftOutro>
-                <a href="https://github.com/joshtom/" target="_blank"> Github. </a>
-                <a href="https://twitter.com/olatojosh" target="_blank"> Twitter. </a>
-                <a href="https://www.linkedin.com/in/joshua-olajide-582457177/" target="_blank"> Linkedin. </a>
-                <a href="https://medium.com/@olajidejoshua4real" target="_blank"> Medium. </a>
+                <a href="https://github.com/joshtom/" target="_blank" rel="noreferrer"> Github. </a>
+                <a href="https://twitter.com/olatojosh" target="_blank" rel="noreferrer"> Twitter. </a>
+                <a href="https://www.linkedin.com/in/joshua-olajide-582457177/" target="_blank" rel="noreferrer"> Linkedin. </a>
+                <a href="https://medium.com/@olajidejoshua4real" target="_blank" rel="noreferrer"> Medium. </a>
             </LeftOutro>
             <RightOutro>
             <p>&copy; {getYear} joshuaolajide</p>

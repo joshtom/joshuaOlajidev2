@@ -6,7 +6,7 @@
    justify-content: center;
    width: 100%;
    min-height: 100vh;
-   /* z-index: -5; */
+   z-index: -5;
    
 }
 
@@ -32,11 +32,13 @@
 .banner > .scroll .scroller { 
     width: 10px;
     height: 10px;
+    opacity: none;
     border-radius: 50%;
     background: black;
     margin: auto;
     animation: bounce 800ms cubic-bezier(0.7, 0, 0.3, 1) infinite alternate;
     cursor: pointer;
+    
 }
 
 

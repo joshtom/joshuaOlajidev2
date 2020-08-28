@@ -1,8 +1,7 @@
 import React, { useRef, useState, useEffect } from "react"
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import gsap from 'gsap';
-// import PropTypes from "prop-types"
-// import { Link } from "gatsby"
+
 import {
   HeaderWrapper,
   Nav,
@@ -32,16 +31,7 @@ import {
   const Link = useRef(null);
   const socialLink = useRef(null);
 
-  // function useLockBodyScroll() {
-  //     useLayoutEffect(() => {
-  //      // Get original value of body overflow
-  //      const originalStyle = window.getComputedStyle(document.body).overflow;  
-  //      // Prevent scrolling on mount
-  //      document.body.style.overflow = 'hidden';
-  //      // Re-enable scrolling when component unmounts
-  //      return () => document.body.style.overflow = originalStyle;
-  //     }, []); // Empty array ensures effect is only run on mount and unmount
-  //   }
+
 
 
   useEffect(() => {
@@ -112,7 +102,9 @@ import {
           <Nav>
               <Logo 
               onClick={(e) => {e.preventDefault(); scrollTo('#banner')}} 
-              style={logo}> <span style={{color: 'var(--textInverse)'}}> joshua. </span> </Logo>
+              style={logo}> <span style={{color: 'var(--textInverse)'}}
+              role="logo"
+              > joshua. </span> </Logo>
               <ThemeToggler>
                   <div onClick={themeToggle}>
                     {theme === "dark" ? "☀" : "☾"}

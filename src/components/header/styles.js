@@ -93,7 +93,7 @@ export const Stick = styled.div`
 // darkgreen #283d3b
 // green #197278
 export const NavToggle = styled.div `
-background: #197278;
+background: #582E80;
 position: fixed;
 height: 100vh;
 width: 35vw;

@@ -44,18 +44,23 @@ $dark: #36363e;
     }
     div:nth-child(2) {
         flex-basis: auto;
-
+        cursor: pointer;
         .about__image {
             position: relative;
-            background-color: #197278;
+            background-color: transparent;
             width: 300px;
             height: 300px;
             margin: auto;
+            cursor: pointer;
+            & > * {
+                width: 100%;
+                height: 100%;
+            }
             &::after {
                 position: absolute;
                 content: "";
                 display: block;
-                border: 2px solid #197278;
+                border: 2px solid #582E80;
                 height: 100%;
                 width: 100%;
                 left: 1.5rem;
@@ -64,7 +69,8 @@ $dark: #36363e;
             }
 
             &:hover {
-
+                cursor: pointer;
+                border-radius: 50%;
             }
         }
 

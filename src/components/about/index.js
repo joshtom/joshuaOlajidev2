@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { Image } from './profileImg'
 import "./style.scss";
 
 export default function About() {
@@ -50,7 +51,7 @@ export default function About() {
     return(
         <div className="About" ref={aboutContainer} id="about">
             <div ref={about}>
-                <h1>Over the past few years,</h1>  
+                <h1>In the last few years,</h1>  
                 <p>
                 I've built products that solve real-life problems ranging from Businesses to companies with focus on creating fast, and accessible user experiences using advanced web technologies. Not only these makes me standout, but paying attention to every detail from any DESIGN which makes me deliver clean, elegant and pixel-perfect solutions.
                 </p> 
@@ -60,7 +61,7 @@ export default function About() {
             </div>
             <div>
                 <div className="about__image" ref={image}>
-                    
+                <Image />
                 </div>
             </div>
         </div>

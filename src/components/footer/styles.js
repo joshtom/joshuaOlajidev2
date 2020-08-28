@@ -98,7 +98,7 @@ export const FirstIntro = styled.div `
         }
     }
     h1 {
-        color: var(--textInverse); 
+        color: var(--textHeaderColor);
         @media screen and (max-width: 982px) {
             font-size: 1.5rem;
         }  

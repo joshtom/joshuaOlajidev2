@@ -19,7 +19,7 @@ body {
     --textTitleInverse: #000;
     --textCreamy: #f8f8f9;
     --shadyText: #ffffff9e;
-    --textHeaderColor: #fff;
+    --textHeaderColor: #FB8B24;
     --textHeaderBg: brown;
     --link: #542c85;
   }

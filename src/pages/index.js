@@ -12,7 +12,7 @@ import SEO from "../components/seo"
 const IndexPage = () => {
   return (
     <Layout>
-    <SEO title="Home" />
+    <SEO title="Joshua Olajide - Portfolio" />
     <Banner />
     <More />
     <About />

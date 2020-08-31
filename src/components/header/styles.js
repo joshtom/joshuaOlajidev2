@@ -26,6 +26,7 @@ color: black;
 padding: 10px;
 align-self: center;
 cursor: pointer;
+width: 100%;
 `
 
 

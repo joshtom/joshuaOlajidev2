@@ -15,7 +15,7 @@ import {
  } from "./styles"
 
 
- export default function Header({ stick, logo }) {
+ export default function Header({ logo }) {
   const [ isToggled, setToggled ] = useState(false)
   const tl = useRef();
 
@@ -94,7 +94,7 @@ import {
               onClick={(e) => {e.preventDefault(); scrollTo('#banner')}} 
               style={logo}> <span style={{color: 'var(--textInverse)'}}
               role="logo"
-              > joshua. </span> </Logo>
+              >Joshua. </span> </Logo>
               <ThemeToggler>
                   <div onClick={themeToggle}>
                     {theme === "dark" ? "☀" : "☾"}

@@ -1,65 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import React from "react";
 import { Url } from './url'
 import { Github } from './github'
 import "./style.scss";
 
-const Project = ({ data }) =>{
-    // const card = useRef();
-    // const scrollContainer = useRef();
-    // let pageYOffset = window.pageYOffset;
-    // const render = () => {
-    //     const newPageOffset = window.pageYOffset
-    //     const diff = newPageOffset - pageYOffset
-        
-    //     const tl = gsap.timeline({
-    //         paused: true
-    //     })
-    //     tl.to(scrollContainer.current, .3, {
-    //         // skewX: -diff * 0.03,
-    //         skewY: diff * 0.1,
-    //         ease: "Power4.ease"
-    //     }).play()
-        
-    //     pageYOffset = newPageOffset
-    //   requestAnimationFrame(render)
-    // }
-    
-
-    // useEffect(() => {
-    //     render();
-    // }, [])
-
-    /* useEffect(() => {
-        // Skew cards on scroll
-    let proxy = { skew: 0 },
-        skewSetter = gsap.quickSetter(card.current, "skewY", "deg"), // fast
-        clamp = gsap.utils.clamp(-20, 20); 
-
-        if (typeof window !== `undefined`) {
-            gsap.registerPlugin(ScrollTrigger)
-            gsap.core.globals('ScrollTrigger', ScrollTrigger)
-            }
-
-            ScrollTrigger.create({
-                onUpdate: (self) => {
-                  let skew = clamp(self.getVelocity() / -300);
-                  // only do something if the skew is MORE severe. Remember, we're always tweening back to 0, so if the user slows their scrolling quickly, it's more natural to just let the tween handle that smoothly rather than jumping to the smaller skew.
-                  if (Math.abs(skew) > Math.abs(proxy.skew)) {
-                    proxy.skew = skew;
-                    gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetter(proxy.skew)});
-                  }
-                }
-              });
-              
-              // make the right edge "stick" to the scroll bar. force3D: true improves performance
-              gsap.set(card.current, {transformOrigin: "right center", force3D: true});
-              
-
-    }, []) */
-
-   
-
+const Project = () =>{
     return(
         <div className="projects" id="project">
             
@@ -68,50 +12,44 @@ const Project = ({ data }) =>{
         <div className="container">
            <div className="card" >
                 <h1> Joshua <br /> Olajide.</h1>
-                <p> portfolio </p>
+                <a href="https://joshuaolajide.netlify.app/" target="_blank" rel="noreferrer" className="card-link"> portfolio </a>
                 <div className="image-links">
-                    <Github />
-                    <Url className="url"/>
+                    <a href="https://github.com/joshtom/joshuaOlajidev2" target="_blank" rel="noreferrer"><Github /></a>
                 </div>  
            </div>
            <div className="card" >
                 <h1> Feeling <br /> Pressed.</h1>
-                <p> blog </p>
+                <a href="https://feeling-pressed.netlify.app/" target="_blank" rel="noreferrer" className="card-link"> blog </a>
                 <div className="image-links">
-                    <Github />
-                    <Url className="url"/>
+                <a href="https://github.com/joshtom/feeling-pressed" target="_blank" rel="noreferrer"><Github /></a>
+                    
                 </div>  
            </div>
            <div className="card" >
                 <h1> Serv- <br /> iceMart.</h1>
-                <p> investment </p>
+                <a href="https://service-mart.netlify.app/" target="_blank" rel="noreferrer" className="card-link"> investment </a>
                 <div className="image-links">
-                    <Github />
-                    <Url className="url"/>
+                    {/* <Github /> */}
                 </div>  
            </div>
            <div className="card" >
                  <h1> Dev <br /> Alert.</h1>
-                <p> jobs </p>
+                 <a href="https://devalert.me" target="_blank" rel="noreferrer" className="card-link"> Jobs </a>
                 <div className="image-links">
-                    <Github />
-                    <Url className="url"/>
+                    
                 </div>  
            </div>
            <div className="card" >
                   <h1> Covid <br /> Report.</h1>
-                <p> healthcare </p>
-                <div className="image-links">
-                    <Github />
-                    <Url className="url"/>
+                  <a href="https://dsc-covid19.netlify.app/" target="_blank" rel="noreferrer" className="card-link"> healthcare </a>
+                <div className="image-links">                    
                 </div>  
            </div>
            <div className="card" >
                  <h1> Conn- <br /> ect Four.</h1>
-                <p> fun game </p>
+                 <a href="https://joshtom.github.io/connect-four-game/" target="_blank" rel="noreferrer" className="card-link"> fun game </a>
                 <div className="image-links">
-                    <Github />
-                    <Url className="url"/>
+                <a href="https://github.com/joshtom/connect-four-game" target="_blank" rel="noreferrer"> <Github /> </a>
                 </div>  
            </div>
         </div>        

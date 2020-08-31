@@ -14,19 +14,21 @@ export default function More() {
             gsap.core.globals('ScrollTrigger', ScrollTrigger)
             }
 
-            const tl = gsap.timeline({
-                paused: true,
-                scrollTrigger: {
-                  trigger: moreContainer.current,
-                  scrub: true,
-                }
-              });
-
-              tl.fromTo(iDesign.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
-              .fromTo(iDevelop.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
-              .fromTo(iLearn.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
-
-
+            ScrollTrigger.matchMedia({
+                "(min-width: 992px)": function scrollOnMobile() {
+                    const tl = gsap.timeline({
+                        scrollTrigger: {
+                          trigger: moreContainer.current,
+                          scrub: true,
+                        }
+                      });
+        
+                      tl.fromTo(iDesign.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
+                      .fromTo(iDevelop.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
+                      .fromTo(iLearn.current, .1, { opacity: 0, y: 100 }, { opacity: 1, y: 0})
+                        }
+                
+            })
     }, [])
 
     return(

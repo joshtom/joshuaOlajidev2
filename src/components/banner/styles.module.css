@@ -70,12 +70,10 @@
     flex-direction: column;
     z-index: 1000;
     color: black;
-    flex-basis: 65%;
+    flex-basis: 60%;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* background: red; */
-    /* min-height: 500px; */
 }
 
 .banner div.bannerText > div { /* Used to create space vertically between the elements */
@@ -147,7 +145,7 @@
         align-items: center;
         justify-self: center;
         align-items: center;
-        background: red;
+        background: #FB8B24;
         border-radius: 20px;
         cursor: pointer;
     }

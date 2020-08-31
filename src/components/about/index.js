@@ -28,23 +28,7 @@ export default function About() {
                     });
 
                     tl.to([image.current, about.current], .1, {rotation:45, autoAlpha: 0, translateX: 200})
-                    //   .to(image.current, .1, {rotation:-45, autoAlpha: 0})
-                        },
-
-                        "(max-width: 991px)": function scrollOnMobile() {
-                    
-                            const tl = gsap.timeline({
-                                paused: true,
-                                scrollTrigger: {
-                                trigger: aboutContainer.current,
-                                start: "top top",
-                                scrub: true,
-                                }
-                            });
-        
-                            tl.to( about.current, .1, {rotation:45, autoAlpha: 0, translateX: 200})
-                            .to(image.current, .1, {rotation:45, autoAlpha: 0, translateX: 200})
-                                },
+                        }
                 
             })
     }, [])

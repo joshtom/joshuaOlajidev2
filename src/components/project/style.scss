@@ -45,14 +45,13 @@ $dark: #222228;
              padding: 40px;
              transition: all 0.50s ease-in-out;
              position: relative;
-             cursor: pointer;
              
-             h1, p {
+             h1, .card-link {
                  color: white;
                  align-self: start;
                  font-family: 'Quattrocento Sans',sans-serif;
              }
-             p {
+             a.card-link {
                  background-color: rgba(0,0,0,.1);
                  padding: 5px;
                  
@@ -92,12 +91,17 @@ $dark: #222228;
                 display: flex;
                 position: absolute;
                 bottom: 20px;
+                
                 * {
                     width: 30px;
+                }
+                a {
+                    cursor: pointer;
                     &:nth-child(2) {
-                        left: 20px;
+                        margin-left: 20px;
                     }
                 }
+                
             }
         
         }

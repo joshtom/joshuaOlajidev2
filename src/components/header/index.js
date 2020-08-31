@@ -37,26 +37,16 @@ import {
   useEffect(() => {
       tl.current = gsap.timeline({paused: true});
       stickTl.current = gsap.timeline({paused: true});
-      tl.current.to(navToggle.current, .4, 
-          {
-              x: 0,
-              opacity: 1,
-              ease: "back.out(1.7)"
-          })
+      tl.current.to(navToggle.current, .4, { x: 0, opacity: 1, ease: "back.out(1.7)"})
           .fromTo(navToggleLinks.current,  .4,{ y: 10, opacity: 0 }, { y: 0, opacity: 1, stagger: true })
           .fromTo(socialLink.current,  .4,{ y: 10, opacity: 0 }, { y: 0, opacity: 1 })
           .play(); //Animating the sidebar
 
-        // Old stick animate
+        // Animate stick
        stickTl.current.to(stick3.current, .1, { xPercent:  -10, opacity: 0 })
-       .to(stick2.current, .1, { rotate: -45,})
-      .to(stick1.current, .1, { y: 6, rotate: 45,})
+       .to(stick2.current, .1, { rotate: -45, width: '50px'})
+      .to(stick1.current, .1, { y: 6, rotate: 45, width: '50px'})
 
-    //   New Stick animate
-    //   stickTl.current.to(stick2.current, { duration: .1, ease: "elastic.out(1, 0.3)", x: -10, });
-    //   //  stickTl.current.to(stick2.current, .1, { ease: "bounce.out", xPercent: -10 })
-    //    stickTl.current.to(stick3.current, .1, { ease: "elastic.out(1, 0.3)", y: 3,})
-    //    stickTl.current.to(stick1.current, .1, { y: -3, })
 
     //    Animating the header on page start
     const headerAnimate = gsap.timeline({ paused: true });
@@ -130,7 +120,7 @@ import {
                           <li ref={Link}
                           onClick={() => setToggled(!isToggled)}
                           >
-                              <a href="#" id="pen">Writings</a>
+                              <a href="https://medium.com/@olajidejoshua4real" id="pen" target="_blank" rel="noreferrer">Writings</a>
                           </li>
       
                           <li ref={Link}

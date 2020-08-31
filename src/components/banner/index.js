@@ -66,16 +66,10 @@ export default function Banner() {
   useEffect(() => {
     const tl = gsap.timeline({ paused: true })
     const pathTl = gsap.timeline({
-      delay: 0.04,
+      delay: .1,
       yoyo: true,
     })
-    tl.fromTo(
-      greet.current,
-      0.1,
-      { y: -10, opacity: 0 },
-      { y: 0, opacity: 1, ease: "bounce.in" }
-    )
-      // tl.fromTo(greet.current, {duration: 2,  ease: "bounce.in", scale:0, rotation:0 }, {duration: 2,  ease: "bounce.out", scale:1.5, rotation:30 } );
+      tl.fromTo( greet.current, 0.1, { y: -10, opacity: 0 }, { y: 0, opacity: 1, ease: "bounce.in" })
       .fromTo(name.current, 0.1, { y: -10, opacity: 0 }, { y: 0, opacity: 1 })
       .fromTo(title.current, 0.1, { y: -10, opacity: 0 }, { y: 0, opacity: 1 })
       .fromTo(
@@ -156,10 +150,10 @@ export default function Banner() {
 
       <div className={styles.bannerText}>
         <div>
-          <p ref={greet}>Hello<span role="img" aria-label="wave">👋🏼</span>, I'm</p>
+          <p ref={greet}>Hello<span role="img" aria-label="wave">👋🏼</span>, I am</p>
 
           <h1 className={styles.avatarName} ref={name}>
-            Joshua Olajide <span role="img" aria-label="verified">✔</span>
+            Joshua Olajide
           </h1>
 
           <h1 className={styles.jobTitle} ref={title}>
@@ -168,11 +162,11 @@ export default function Banner() {
 
           <section className={styles.bannerTextSection}>
             <p ref={left} className={styles.bannerTextSection__intro}>
-              I <span className={styles.bannerTextSection__heart} role="img" aria-label="love">❤</span> to
+              I love to
               create Scalable, Fast and mobile-first web Applications.
             </p>
             <p ref={right}>
-              Put on a <span role="img" aria-label="smile">😊</span> and Get ready to turn your Imaginations into reality.
+              Put on a smile and Get ready to turn your Imaginations into reality.
             </p>
           </section>
         </div>

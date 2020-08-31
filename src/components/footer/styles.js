@@ -41,7 +41,7 @@ export const ContainerHeader = styled.h1 `
     color: var(--textHeaderColor);  
 
     @media screen and (max-width: 982px) {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 `
 export const Linked = styled.div `
@@ -52,7 +52,7 @@ export const Linked = styled.div `
         font-weight: lighter;
 
         @media screen and (max-width: 982px) {
-            font-size: 3rem;
+            font-size: 2rem;
         }
         
     }

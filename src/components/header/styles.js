@@ -53,7 +53,7 @@ export const Hamburger = styled.div`
     transition: 300ms all ease-in-out;
     cursor: pointer;
     padding: 10px;
-    background: var(--bg);
+    
     overflow-x: hidden;
     div {
         width: 30px;
@@ -93,7 +93,7 @@ export const Stick = styled.div`
 // darkgreen #283d3b
 // green #197278
 export const NavToggle = styled.div `
-background: #582E80;
+background: #197278;
 position: fixed;
 height: 100vh;
 width: 35vw;

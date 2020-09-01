@@ -143,10 +143,10 @@ import {
                               <p> joshuaolajide@gmail.com </p>
                               </Con>
                               <Social>
-                                  <a href="#" className="gh">GH</a>
-                                  <a href="#" className="tw">TW</a>
-                                  <a href="#" className="ln">LN</a>
-                                  <a href="#" className="md">MD</a>
+                              <a href="https://github.com/joshtom/" target="_blank" rel="noreferrer" className="gh">GH</a>
+                                  <a href="https://twitter.com/olatojosh" target="_blank" rel="noreferrer" className="tw">TW</a>
+                                  <a href="https://www.linkedin.com/in/joshua-olajide-582457177/" target="_blank" rel="noreferrer" className="ln">LN</a>
+                                  <a href="https://medium.com/@olajidejoshua4real" target="_blank" rel="noreferrer" className="md">MD</a>
                               </Social>
 
 

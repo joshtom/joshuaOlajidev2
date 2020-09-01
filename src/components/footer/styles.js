@@ -1,17 +1,17 @@
 import styled from "styled-components"
 
 export const FooterWrapper = styled.div`
-    background: transparent;
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 50px 200px;
+    padding: 0px 200px 50px 200px;
+    background: ;
    
 
     @media screen and (max-width: 982px) {
-        padding: 50px;
+        padding: 0px 50px 30px 50px;
     }
     
 
@@ -23,18 +23,14 @@ export const FooterWrapper = styled.div`
 
 export const IntroFooter = styled.div `
     width: 100%;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    
-    
-
 `
 export const Container = styled.div `
-    margin-top: auto;
-    align-self: self-end;
+    
 `
 export const ContainerHeader = styled.h1 `
     font-size: 4rem;
@@ -85,6 +81,7 @@ export const FirstIntro = styled.div `
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
     
     div:nth-child(1) {
         @media screen and (max-width: 982px) {

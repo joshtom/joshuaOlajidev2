@@ -2,6 +2,22 @@ import { createGlobalStyle } from "styled-components"
 
 export default createGlobalStyle`
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #eee;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #eee;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 0px;
+    border: 3px solid #582E80;
+  }
+}
 body {
   margin: 0;
   padding: 0;

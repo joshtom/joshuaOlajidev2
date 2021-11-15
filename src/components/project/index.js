@@ -10,6 +10,13 @@ const Project = () =>{
             <h1 className="project-title"> Projects. </h1>            
             <p className="project-subtitle"> I <b>design</b> and <b>Build</b> web Applications. </p>
         <div className="container">
+        <div className="card" >
+                 <h1> Asiko.</h1>
+                 <a href="https://asiko.flutterwave.com/" target="_blank" rel="noreferrer" className="card-link"> Lifestyle </a>
+                <div className="image-links">
+                    
+                </div>  
+           </div>
            <div className="card" >
                 <h1> Joshua <br /> Olajide.</h1>
                 <a href="https://joshuaolajide.netlify.app/" target="_blank" rel="noreferrer" className="card-link"> portfolio </a>
@@ -30,13 +37,6 @@ const Project = () =>{
                 <a href="https://service-mart.netlify.app/" target="_blank" rel="noreferrer" className="card-link"> investment </a>
                 <div className="image-links">
                     {/* <Github /> */}
-                </div>  
-           </div>
-           <div className="card" >
-                 <h1> Dev <br /> Alert.</h1>
-                 <a href="https://devalert.me" target="_blank" rel="noreferrer" className="card-link"> Jobs </a>
-                <div className="image-links">
-                    
                 </div>  
            </div>
            <div className="card" >
